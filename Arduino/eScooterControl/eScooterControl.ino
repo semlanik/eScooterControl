@@ -1,0 +1,59 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2020 Alexey Edelev <semlanik@gmail.com>
+ *
+ * This file is part of eScooterControl project https://github.com/semlanik/eScooterControl
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this
+ * software and associated documentation files (the "Software"), to deal in the Software
+ * without restriction, including without limitation the rights to use, copy, modify,
+ * merge, publish, distribute, sublicense, and/or sell copies of the Software, and
+ * to permit persons to whom the Software is furnished to do so, subject to the following
+ * conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies
+ * or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+ * PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+ * FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+ * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ * DEALINGS IN THE SOFTWARE.
+ */
+#include "thread.h"
+#include "display.h"
+#include "speedometer.h"
+
+/* we always wait a bit between updates of the display */
+const unsigned long DisplayUpdateTime = 500;
+const unsigned long BatteryUpdateTime = 1000;
+
+Thread gDisplayThread = Thread(DisplayUpdateTime);
+Thread gBatteryThread = Thread(BatteryUpdateTime);
+
+unsigned char fakeBatteryLevel = 0;
+
+void setup() {
+  Speedometer::instance()->attachToDisplay(Display::instance());
+  
+  gDisplayThread.assignCallback([](){
+    Display::instance()->updateDisplayBuffer();
+  });
+
+  gBatteryThread.assignCallback([](){
+    Display::instance()->drawBatteryLevel(fakeBatteryLevel);
+    fakeBatteryLevel++;
+    if (fakeBatteryLevel > 5) {
+      fakeBatteryLevel = 0;
+    }
+  });
+  
+  pinMode(3, OUTPUT);
+  digitalWrite(3, LOW);
+}
+
+void loop() {
+  Thread::dispatch();
+}
