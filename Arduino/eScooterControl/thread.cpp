@@ -37,6 +37,10 @@ Thread::Thread(unsigned long delay) : mDelay(delay)
 
 void Thread::dispatchThread()
 {
+  if (mCallback == nullptr) {
+    return;
+  }
+  
   unsigned long time = millis();
   unsigned long delay = time - mLastCallTime;
   if (delay >= mDelay) {

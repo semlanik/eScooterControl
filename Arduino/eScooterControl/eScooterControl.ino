@@ -25,33 +25,40 @@
 #include "thread.h"
 #include "display.h"
 #include "speedometer.h"
+#include "accelerationcontrol.h"
 
 /* we always wait a bit between updates of the display */
+const unsigned long AcceleratorPedalUpdateTime = 200;
 const unsigned long DisplayUpdateTime = 500;
 const unsigned long BatteryUpdateTime = 1000;
 
 Thread gDisplayThread = Thread(DisplayUpdateTime);
 Thread gBatteryThread = Thread(BatteryUpdateTime);
+Thread gAcceleratorPedalThread = Thread(AcceleratorPedalUpdateTime);
 
 unsigned char fakeBatteryLevel = 0;
 
 void setup() {
+//  Serial.begin(115200);
+//  Serial.println("Init");
+
   Speedometer::instance()->attachToDisplay(Display::instance());
   
-  gDisplayThread.assignCallback([](){
+  gDisplayThread.assignCallback([](unsigned long){
     Display::instance()->updateDisplayBuffer();
   });
 
-  gBatteryThread.assignCallback([](){
+  gBatteryThread.assignCallback([](unsigned long){
     Display::instance()->drawBatteryLevel(fakeBatteryLevel);
     fakeBatteryLevel++;
     if (fakeBatteryLevel > 5) {
       fakeBatteryLevel = 0;
     }
   });
-  
-  pinMode(3, OUTPUT);
-  digitalWrite(3, LOW);
+
+  gAcceleratorPedalThread.assignCallback([](unsigned long time){
+    AccelerationControl::instance()->dispatch(time);
+  });
 }
 
 void loop() {

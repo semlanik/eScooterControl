@@ -22,26 +22,34 @@
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
+
 #pragma once
 
-#if defined(ARDUINO) && ARDUINO >= 100
-  #include <Arduino.h>
-#else
-  #include <WProgram.h>
-#endif
+#include <Adafruit_MCP4725.h>
+#include "singleton.h"
 
-const int HallSensorPin = 2;
-const int StopSensorPin = 3;
+class AccelerationControl : public Singleton<AccelerationControl>
+{
+public:
+  void dispatch(unsigned long);
 
-const int DisplayDataPin = 10;
-const int DisplayCsPin = 11;
-const int DisplayClkPin = 12;
+private:
+  AccelerationControl();
+  friend class Singleton;
 
-const int AcceleratorSensorPin = A0;
+  void setAcceleration(int level);
+  int readAcceleratorData();
+  void updateAccelerationVoltage();
+  
+  void stop();
 
-//Align accelerator trigger values
-const int AcceleratorSensorMinValue = 177;
-const int AcceleratorSensorMaxValue = 874;
-const int AcceleratorSensorStep = 10;
+  Adafruit_MCP4725 m_accelerator;
 
-const int CruiseTime = 3000; //milliseconds
+  unsigned int m_stopState;
+  
+  unsigned int m_accelerationLevel;
+  unsigned int m_accelerationVoltage;
+
+  unsigned long m_cruiseTime;
+  unsigned int m_cruiseLevel;
+};

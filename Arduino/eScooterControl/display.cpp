@@ -94,8 +94,8 @@ const PROGMEM byte Digit[10][5] = {
   }
 };
 
-Display::Display() : mLedControl(DisplayDataPin, DisplayClkPin, DisplayCsPin,1)
- ,mDisplayBuffer({
+Display::Display() : mLedControl(DisplayDataPin, DisplayClkPin, DisplayCsPin,2)
+ ,mDisplayBuffer{
   B00000000,
   B00000000,
   B00000000,
@@ -103,11 +103,15 @@ Display::Display() : mLedControl(DisplayDataPin, DisplayClkPin, DisplayCsPin,1)
   B00000000,
   B00000000,
   B00000000,
-  B00000000})
+  B00000000}
 {
   mLedControl.shutdown(0, false);
   mLedControl.setIntensity(0, 0);
   mLedControl.clearDisplay(0);  
+
+  mLedControl.shutdown(1, false);
+  mLedControl.setIntensity(1, 0);
+  mLedControl.clearDisplay(1);  
 }
 
 void Display::drawSpeed(unsigned char number)
@@ -145,6 +149,6 @@ void Display::drawBatteryLevel(unsigned char level)
 void Display::updateDisplayBuffer()
 {
   for(int i = 0; i < 8; i++) {
-    mLedControl.setColumn(0, i, mDisplayBuffer[i]);    
+    mLedControl.setColumn(1, i, mDisplayBuffer[i]);    
   }
 }
