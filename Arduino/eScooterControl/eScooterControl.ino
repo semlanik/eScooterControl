@@ -42,23 +42,26 @@ void setup() {
 //  Serial.begin(115200);
 //  Serial.println("Init");
 
+  AccelerationControl::instance();
+  gAcceleratorPedalThread.assignCallback([](unsigned long time) {
+    AccelerationControl::instance()->dispatch(time);
+  });
+
   Speedometer::instance()->attachToDisplay(Display::instance());
-  
-  gDisplayThread.assignCallback([](unsigned long){
+
+  Display::instance();
+  gDisplayThread.assignCallback([](unsigned long) {
     Display::instance()->updateDisplayBuffer();
   });
 
-  gBatteryThread.assignCallback([](unsigned long){
+  gBatteryThread.assignCallback([](unsigned long) {
     Display::instance()->drawBatteryLevel(fakeBatteryLevel);
     fakeBatteryLevel++;
     if (fakeBatteryLevel > 5) {
       fakeBatteryLevel = 0;
     }
   });
-
-  gAcceleratorPedalThread.assignCallback([](unsigned long time){
-    AccelerationControl::instance()->dispatch(time);
-  });
+//  Serial.println("Init complete");
 }
 
 void loop() {

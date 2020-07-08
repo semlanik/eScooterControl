@@ -40,8 +40,9 @@ const int DisplayClkPin = 12;
 const int AcceleratorSensorPin = A0;
 
 //Align accelerator trigger values
-const int AcceleratorSensorMinValue = 177;
-const int AcceleratorSensorMaxValue = 874;
+const int AcceleratorSensorDiff = 548;
 const int AcceleratorSensorStep = 10;
 
 const int CruiseTime = 3000; //milliseconds
+
+const uint8_t AcceleratorAddress = 0x62;

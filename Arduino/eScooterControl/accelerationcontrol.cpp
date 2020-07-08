@@ -26,15 +26,25 @@
 #include "accelerationcontrol.h"
 #include "pinconfig.h"
 
-const int AcceleratorSensorDivider = (AcceleratorSensorMaxValue - AcceleratorSensorMinValue) * AcceleratorSensorStep;
+const int AcceleratorSensorDivider = AcceleratorSensorDiff * AcceleratorSensorStep;
+
+const int MaxLevel = 100/AcceleratorSensorStep;
 
 AccelerationControl::AccelerationControl() : m_stopState(HIGH)
+  , m_acceleratorMinValue(0)
   , m_accelerationLevel(0)
   , m_accelerationVoltage(0)
   , m_cruiseTime(0)
   , m_cruiseLevel(0)
 {
-//  m_accelerator.begin(0x62);//TODO address to be setup from pinconfig;
+  bool result = m_accelerator.begin(0x60);//TODO address to be setup from pinconfig;
+  m_accelerator.setVoltage(0, false);
+
+//  if (!result) {
+//    Serial.println("unable to find on 0x62");
+//  } else {
+//    Serial.println("0x62 ok");
+//  }
   pinMode(AcceleratorSensorPin, INPUT);
   pinMode(StopSensorPin, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(StopSensorPin), [](){
@@ -42,6 +52,9 @@ AccelerationControl::AccelerationControl() : m_stopState(HIGH)
   }, CHANGE);
 
   m_stopState = digitalRead(StopSensorPin);
+  m_acceleratorMinValue = analogRead(AcceleratorSensorPin);
+//  Serial.print("Accelerator min value: ");
+//  Serial.println(m_acceleratorMinValue);
 }
 
 
@@ -82,14 +95,35 @@ void AccelerationControl::stop() {
 int AccelerationControl::readAcceleratorData()
 {
   int value = analogRead(AcceleratorSensorPin);
-  return round(100.0*(value - AcceleratorSensorMinValue)/AcceleratorSensorDivider);
+  if (value < m_acceleratorMinValue) {
+    m_acceleratorMinValue = value; //Andjust min value accordingly
+  }
+//  Serial.print("Accelerator sensor: ");
+//  Serial.print(value);
+//  Serial.print(" ");
+  int outValue = round(100.0*(value - m_acceleratorMinValue)/AcceleratorSensorDivider);
+  if (outValue > MaxLevel) {
+    outValue = MaxLevel;
+  } else if (outValue < 0) {
+    outValue = 0;
+  }
+//  Serial.println(outValue);
+  return outValue;
 }
 
 void AccelerationControl::updateAccelerationVoltage() {
+//  Serial.print("Acceleration level: ");
+//  Serial.println(m_accelerationLevel);
+
   int level = m_accelerationLevel;
   if (m_cruiseLevel > 0) {//At cruise control
     level = m_cruiseLevel;
   }
 
-  int expectedVoltage = 0x0fff / AcceleratorSensorStep * level;
+  int expectedVoltage = round(float(0x0fff) / float(AcceleratorSensorStep) * float(level));
+  m_accelerator.setVoltage(expectedVoltage, false);
+
+  float voltage = 5.0f / 0x0fff * float(expectedVoltage);
+//  Serial.print("Expected voltage: ");
+//  Serial.println(voltage);
 }

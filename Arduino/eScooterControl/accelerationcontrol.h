@@ -47,6 +47,7 @@ private:
 
   unsigned int m_stopState;
   
+  int m_acceleratorMinValue;
   unsigned int m_accelerationLevel;
   unsigned int m_accelerationVoltage;
 
