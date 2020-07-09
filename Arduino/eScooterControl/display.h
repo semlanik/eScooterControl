@@ -31,6 +31,7 @@
 class Display : public Singleton<Display>
 {
 public:
+  void drawAccelerationLevel(unsigned char level);
   void drawSpeed(unsigned char number);
   void drawBatteryLevel(unsigned char level);
   void updateDisplayBuffer();
@@ -39,6 +40,6 @@ private:
   Display();
   friend class Singleton;
 
-  byte mDisplayBuffer[8];
+  byte mDisplayBuffer[16];
   LedControl mLedControl;
 };

@@ -31,6 +31,8 @@
 #endif
 
 const int HallSensorPin = 2;
+const int PulsePerCircle = 45;
+
 const int StopSensorPin = 3;
 
 const int DisplayDataPin = 10;

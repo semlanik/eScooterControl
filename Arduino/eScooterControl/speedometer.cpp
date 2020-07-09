@@ -56,11 +56,15 @@ void Speedometer::attachToDisplay(Display *display) {
 void Speedometer::incrementHallCounter()
 {
   mHallCounter++;
-  unsigned long currentTime = millis();
-  mMomentSpeed = TireLengthCoef/(currentTime - mLastHallTime);
-  mLastHallTime = currentTime;
-
-  if (mDisplay != nullptr) {
-    mDisplay->drawSpeed(mMomentSpeed);
+  int currentTick = mHallCounter % PulsePerCircle;
+  if (currentTick == 0) {
+    mHallCounter = 0;
+    unsigned long currentTime = millis();
+    mMomentSpeed = TireLengthCoef / (currentTime - mLastHallTime);
+    mLastHallTime = currentTime;
+  
+    if (mDisplay != nullptr) {
+      mDisplay->drawSpeed(mMomentSpeed);
+    }
   }
 }

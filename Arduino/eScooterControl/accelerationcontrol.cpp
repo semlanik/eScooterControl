@@ -26,6 +26,7 @@
 #include "accelerationcontrol.h"
 #include "pinconfig.h"
 #include "Wire.h"
+#include "display.h"
 
 const int AcceleratorSensorDivider = AcceleratorSensorDiff * AcceleratorSensorStep;
 
@@ -111,6 +112,9 @@ void AccelerationControl::updateAccelerationVoltage() {
   if (m_cruiseLevel > 0) {//At cruise control
     level = m_cruiseLevel;
   }
+
+  Display::instance()->drawAccelerationLevel(level);
+
 
   int expectedVoltage = round(float(0x0fff) / float(AcceleratorSensorStep) * float(level));
   Wire.beginTransmission(AcceleratorAddress);

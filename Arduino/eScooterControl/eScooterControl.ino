@@ -29,7 +29,7 @@
 
 /* we always wait a bit between updates of the display */
 const unsigned long AcceleratorPedalUpdateTime = 200;
-const unsigned long DisplayUpdateTime = 500;
+const unsigned long DisplayUpdateTime = 250;
 const unsigned long BatteryUpdateTime = 1000;
 
 Thread gDisplayThread = Thread(DisplayUpdateTime);
