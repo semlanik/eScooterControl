@@ -45,4 +45,4 @@ const int AcceleratorSensorStep = 10;
 
 const int CruiseTime = 3000; //milliseconds
 
-const uint8_t AcceleratorAddress = 0x62;
+const uint8_t AcceleratorAddress = 0x60;

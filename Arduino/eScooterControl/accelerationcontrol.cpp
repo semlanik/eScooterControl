@@ -25,6 +25,7 @@
 #include "singleton.h"
 #include "accelerationcontrol.h"
 #include "pinconfig.h"
+#include "Wire.h"
 
 const int AcceleratorSensorDivider = AcceleratorSensorDiff * AcceleratorSensorStep;
 
@@ -37,14 +38,7 @@ AccelerationControl::AccelerationControl() : m_stopState(HIGH)
   , m_cruiseTime(0)
   , m_cruiseLevel(0)
 {
-  bool result = m_accelerator.begin(0x60);//TODO address to be setup from pinconfig;
-  m_accelerator.setVoltage(0, false);
-
-//  if (!result) {
-//    Serial.println("unable to find on 0x62");
-//  } else {
-//    Serial.println("0x62 ok");
-//  }
+  Wire.begin();
   pinMode(AcceleratorSensorPin, INPUT);
   pinMode(StopSensorPin, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(StopSensorPin), [](){
@@ -53,8 +47,6 @@ AccelerationControl::AccelerationControl() : m_stopState(HIGH)
 
   m_stopState = digitalRead(StopSensorPin);
   m_acceleratorMinValue = analogRead(AcceleratorSensorPin);
-//  Serial.print("Accelerator min value: ");
-//  Serial.println(m_acceleratorMinValue);
 }
 
 
@@ -121,9 +113,13 @@ void AccelerationControl::updateAccelerationVoltage() {
   }
 
   int expectedVoltage = round(float(0x0fff) / float(AcceleratorSensorStep) * float(level));
-  m_accelerator.setVoltage(expectedVoltage, false);
+  Wire.beginTransmission(AcceleratorAddress);
+  Wire.write(64);
+  Wire.write(expectedVoltage >> 4);
+  Wire.write((expectedVoltage & 15) << 4);
+  Wire.endTransmission();
 
-  float voltage = 5.0f / 0x0fff * float(expectedVoltage);
+//  float voltage = 5.0f / 0x0fff * float(expectedVoltage);
 //  Serial.print("Expected voltage: ");
 //  Serial.println(voltage);
 }

@@ -25,7 +25,6 @@
 
 #pragma once
 
-#include <Adafruit_MCP4725.h>
 #include "singleton.h"
 
 class AccelerationControl : public Singleton<AccelerationControl>
@@ -42,8 +41,6 @@ private:
   void updateAccelerationVoltage();
   
   void stop();
-
-  Adafruit_MCP4725 m_accelerator;
 
   unsigned int m_stopState;
   
