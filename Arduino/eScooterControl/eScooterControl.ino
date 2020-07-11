@@ -26,15 +26,18 @@
 #include "display.h"
 #include "speedometer.h"
 #include "accelerationcontrol.h"
+#include "buttoncontrol.h"
 
 /* we always wait a bit between updates of the display */
 const unsigned long AcceleratorPedalUpdateTime = 200;
 const unsigned long DisplayUpdateTime = 250;
 const unsigned long BatteryUpdateTime = 1000;
+const unsigned long ButtonHandlingTime = 50;
 
 Thread gDisplayThread = Thread(DisplayUpdateTime);
 Thread gBatteryThread = Thread(BatteryUpdateTime);
 Thread gAcceleratorPedalThread = Thread(AcceleratorPedalUpdateTime);
+Thread gButtonThread = Thread(ButtonHandlingTime);
 
 unsigned char fakeBatteryLevel = 0;
 
@@ -63,6 +66,11 @@ void setup() {
     if (fakeBatteryLevel > 5) {
       fakeBatteryLevel = 0;
     }
+  });
+
+  ButtonControl::instance();
+  gButtonThread.assignCallback([](unsigned long){
+    ButtonControl::instance()->dispatch();
   });
 //  Serial.println("Init complete");
 }

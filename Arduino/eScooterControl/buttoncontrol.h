@@ -22,35 +22,23 @@
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
+
 #pragma once
 
-#if defined(ARDUINO) && ARDUINO >= 100
-  #include <Arduino.h>
-#else
-  #include <WProgram.h>
-#endif
+#include "singleton.h"
 
+class ButtonControl : public Singleton<ButtonControl>
+{
+public:
+  void dispatch();
+  void toggleLedState();
 
-const int ButtonPin = 4;
-const int PowerPin = 5;
+private:
+  friend class Singleton;
+  ButtonControl();
 
-const int LedPin = 6;
-
-const int HallSensorPin = 2;
-const int PulsePerCircle = 45;
-
-const int StopSensorPin = 3;
-
-const int DisplayDataPin = 10;
-const int DisplayCsPin = 11;
-const int DisplayClkPin = 12;
-
-const int AcceleratorSensorPin = A0;
-
-//Align accelerator trigger values
-const int AcceleratorSensorDiff = 548;
-const int AcceleratorSensorStep = 10;
-
-const int CruiseTime = 3000; //ms
-
-const uint8_t AcceleratorAddress = 0x60;
+  unsigned int m_triggers;
+  unsigned long m_triggerTime;
+  int m_previousState;
+  int m_ledState;
+};

@@ -36,8 +36,10 @@
 const float TireLength = 0.6783;
 const float TireLengthCoef = 2441.88;
 
+namespace {
 void callback() {
   Speedometer::instance()->incrementHallCounter();
+}
 }
 
 Speedometer::Speedometer() : mMomentSpeed(0)
