@@ -30,6 +30,7 @@
 
 /* we always wait a bit between updates of the display */
 const unsigned long AcceleratorPedalUpdateTime = 200;
+const unsigned long AcceleratorUpdateTime = 10;
 const unsigned long DisplayUpdateTime = 250;
 const unsigned long BatteryUpdateTime = 1000;
 const unsigned long ButtonHandlingTime = 50;
@@ -37,6 +38,7 @@ const unsigned long ButtonHandlingTime = 50;
 Thread gDisplayThread = Thread(DisplayUpdateTime);
 Thread gBatteryThread = Thread(BatteryUpdateTime);
 Thread gAcceleratorPedalThread = Thread(AcceleratorPedalUpdateTime);
+Thread gAcceleratorThread = Thread(AcceleratorUpdateTime);
 Thread gButtonThread = Thread(ButtonHandlingTime);
 
 unsigned char fakeBatteryLevel = 0;
@@ -49,6 +51,10 @@ void setup() {
   AccelerationControl::instance();
   gAcceleratorPedalThread.assignCallback([](unsigned long time){
     AccelerationControl::instance()->dispatch(time);
+  });
+
+  gAcceleratorThread.assignCallback([](unsigned long){
+    AccelerationControl::instance()->dispatchAcceleration();
   });
 
   delay(500);

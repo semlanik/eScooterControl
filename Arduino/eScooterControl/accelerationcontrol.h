@@ -31,14 +31,14 @@ class AccelerationControl : public Singleton<AccelerationControl>
 {
 public:
   void dispatch(unsigned long);
-
+  void dispatchAcceleration();
 private:
   AccelerationControl();
   friend class Singleton;
 
-  void setAcceleration(int level);
+  void setAccelerationLevel(int level);
   int readAcceleratorData();
-  void updateAccelerationVoltage();
+  void updateAcceleration();
   
   void stop();
 
@@ -46,7 +46,8 @@ private:
   
   int m_acceleratorMinValue;
   unsigned int m_accelerationLevel;
-  unsigned int m_accelerationVoltage;
+  unsigned short m_expectedAcceleration;
+  unsigned short m_actualAcceleration;
 
   unsigned long m_cruiseTime;
   unsigned int m_cruiseLevel;

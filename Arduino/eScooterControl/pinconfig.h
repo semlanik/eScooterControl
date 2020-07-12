@@ -31,6 +31,11 @@
 #endif
 
 
+//Two pins used by Wire library for I2C bus
+//Are not used in code directly. Keep here as reminder.
+const int I2CSDA = A4;
+const int I2CSCL = A5;
+
 const int ButtonPin = 4;
 const int PowerPin = 5;
 
@@ -49,7 +54,6 @@ const int AcceleratorSensorPin = A0;
 
 //Align accelerator trigger values
 const int AcceleratorSensorDiff = 548;
-const int AcceleratorSensorStep = 10;
 
 const int CruiseTime = 3000; //ms
 

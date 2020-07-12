@@ -28,6 +28,25 @@
 #include "Wire.h"
 #include "display.h"
 
+#include <avr/pgmspace.h>
+
+const int AcceleratorSensorStep = 10;
+const int AcceleratorStep = 21;//From 0 to 4095 for 2s with update each 10ms
+
+const PROGMEM unsigned short AccelerationLevelTable[11] = {
+  0,
+  410,
+  820,
+  1230,
+  1640,
+  2050,
+  2460,
+  2870,
+  3280,
+  3690,
+  4095
+};
+
 const int AcceleratorSensorDivider = AcceleratorSensorDiff * AcceleratorSensorStep;
 
 const int MaxLevel = 100/AcceleratorSensorStep;
@@ -35,7 +54,8 @@ const int MaxLevel = 100/AcceleratorSensorStep;
 AccelerationControl::AccelerationControl() : m_stopState(HIGH)
   , m_acceleratorMinValue(0)
   , m_accelerationLevel(0)
-  , m_accelerationVoltage(0)
+  , m_expectedAcceleration(0)
+  , m_actualAcceleration(0)
   , m_cruiseTime(0)
   , m_cruiseLevel(0)
 {
@@ -51,7 +71,7 @@ AccelerationControl::AccelerationControl() : m_stopState(HIGH)
 }
 
 
-void AccelerationControl::setAcceleration(const int level)
+void AccelerationControl::setAccelerationLevel(const int level)
 {
   if (level == m_accelerationLevel) {
     if (m_cruiseLevel < m_accelerationLevel
@@ -72,16 +92,16 @@ void AccelerationControl::setAcceleration(const int level)
 void AccelerationControl::dispatch(unsigned long)
 {  
   if (m_stopState == HIGH) {
-    setAcceleration(readAcceleratorData());
+    setAccelerationLevel(readAcceleratorData());
   }
-  updateAccelerationVoltage();
+  updateAcceleration();
 }
 
 void AccelerationControl::stop() {
   m_stopState = digitalRead(StopSensorPin);
   if (m_stopState == LOW) {
     m_cruiseLevel = 0; //reset cruise when stop
-    setAcceleration(0);
+    setAccelerationLevel(0);
   }
 }
 
@@ -104,7 +124,7 @@ int AccelerationControl::readAcceleratorData()
   return outValue;
 }
 
-void AccelerationControl::updateAccelerationVoltage() {
+void AccelerationControl::updateAcceleration() {
 //  Serial.print("Acceleration level: ");
 //  Serial.println(m_accelerationLevel);
 
@@ -115,15 +135,39 @@ void AccelerationControl::updateAccelerationVoltage() {
 
   Display::instance()->drawAccelerationLevel(level);
 
+  m_expectedAcceleration = pgm_read_word(&AccelerationLevelTable[level]);
+//  Serial.print("Expected acceleration: ");
+//  Serial.println(m_expectedAcceleration);
+}
 
-  int expectedVoltage = round(float(0x0fff) / float(AcceleratorSensorStep) * float(level));
+void AccelerationControl::dispatchAcceleration()
+{
+  if (m_actualAcceleration == m_expectedAcceleration) {
+    return;
+  }
+  
+  if (m_actualAcceleration > m_expectedAcceleration) {
+    //No need to step down, set acceleration immediatelly
+    m_actualAcceleration = m_expectedAcceleration;
+//    if (m_actualAcceleration > AcceleratorStep) {
+//      m_actualAcceleration -= AcceleratorStep;
+//    } else {
+//      m_actualAcceleration = 0;
+//    }
+  } else if (m_actualAcceleration < m_expectedAcceleration) {
+    m_actualAcceleration += AcceleratorStep;
+    if (m_actualAcceleration > 0x0fff) {
+      m_actualAcceleration = 0x0fff;
+    }
+  }
+
   Wire.beginTransmission(AcceleratorAddress);
   Wire.write(64);
-  Wire.write(expectedVoltage >> 4);
-  Wire.write((expectedVoltage & 15) << 4);
+  Wire.write(m_actualAcceleration >> 4);
+  Wire.write((m_actualAcceleration & 15) << 4);
   Wire.endTransmission();
 
-//  float voltage = 5.0f / 0x0fff * float(expectedVoltage);
+//  float expectedVoltage = 5.0f / 0x0fff * float(m_actualAcceleration);
 //  Serial.print("Expected voltage: ");
-//  Serial.println(voltage);
+//  Serial.println(expectedVoltage);
 }
