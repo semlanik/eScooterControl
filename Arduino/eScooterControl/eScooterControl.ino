@@ -68,7 +68,7 @@ void setup() {
   gBatteryThread.assignCallback([](){
     Display::instance()->setBatteryLevel(fakeBatteryLevel);
     fakeBatteryLevel++;
-    if (fakeBatteryLevel > 5) {
+    if (fakeBatteryLevel > 6) {
       fakeBatteryLevel = 0;
     }
   });

@@ -97,6 +97,7 @@ void AccelerationControl::dispatch()
 
 void AccelerationControl::stop() {
   m_stopState = digitalRead(StopSensorPin);
+  Display::instance()->setStop(!m_stopState);
   if (m_stopState == LOW) {
     m_cruiseLevel = 0; //reset cruise when stop
     setAccelerationLevel(0);

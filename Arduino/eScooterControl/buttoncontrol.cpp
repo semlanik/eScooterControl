@@ -25,6 +25,7 @@
 
 #include "buttoncontrol.h"
 #include "pinconfig.h"
+#include "display.h"
 
 const unsigned long ReactionTime = 700;
 
@@ -80,6 +81,8 @@ void ButtonControl::toggleLedState()
   } else {
     m_ledState = HIGH;
   }
+
+  Display::instance()->setLightOn(m_ledState);
 
   digitalWrite(LedPin, m_ledState);
 }

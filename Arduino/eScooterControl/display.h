@@ -34,15 +34,35 @@ public:
   void updateDisplayBuffer();
 
   void setAcceleration(byte level) {
-    m_acceleration = level;
+    updateValue(m_acceleration, level);
   }
 
   void setSpeed(byte speed) {
-    m_speed = speed;
+    updateValue(m_speed, speed);
   }
 
   void setBatteryLevel(byte level) {
-    m_battery = level;
+    updateValue(m_battery, level);
+  }
+
+  void setStop(bool stop) {
+    updateValue(m_stop, stop);
+  }
+
+  void setLightOn(bool lightOn) {
+    updateValue(m_lightOn, lightOn);
+  }
+
+  void setEco(bool eco) {
+    updateValue(m_eco, eco);
+  }
+
+  template<typename T>
+  void updateValue(T &value, const T newValue) {
+    if (value != newValue) {
+      value = newValue;
+      m_updateRequested = true;      
+    }
   }
 
 private:
@@ -52,11 +72,18 @@ private:
   void drawAccelerationLevel();
   void drawSpeed();
   void drawBatteryLevel();
-  
+  void drawLampSign();
+  void drawEcoSign();
+  void drawStopSign();
+
   byte mDisplayBuffer[16];
   LedControl mLedControl;
+  bool m_updateRequested;
 
   byte m_acceleration;
   byte m_battery;
   byte m_speed;
+  bool m_stop;
+  bool m_lightOn;
+  bool m_eco;
 };
