@@ -35,7 +35,7 @@ public:
   
 protected:
   Singleton() = default;
-
+  virtual ~Singleton() = default;
 private:
   Singleton(const Singleton&) = delete;
   Singleton(const Singleton&&) = delete;

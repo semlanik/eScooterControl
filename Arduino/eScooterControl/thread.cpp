@@ -24,7 +24,7 @@
  */
 #include "thread.h"
 
-unsigned char Thread::sThreadSlots = 0;
+byte Thread::sThreadSlots = 0;
 Thread* Thread::sThreadPool[8] = { nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr };
 
 Thread::Thread(unsigned long delay) : mDelay(delay)
@@ -44,13 +44,13 @@ void Thread::dispatchThread()
   unsigned long time = millis();
   unsigned long delay = time - mLastCallTime;
   if (delay >= mDelay) {
-    mCallback(delay);
+    mCallback();
     mLastCallTime = time;
   }
 }
 
 void Thread::dispatch() {
-  for (unsigned char i = 0; i < sThreadSlots; i++) {
+  for (byte i = 0; i < sThreadSlots; i++) {
     if (sThreadPool[i] != nullptr) {
       sThreadPool[i]->dispatchThread();
     }

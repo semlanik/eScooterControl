@@ -25,6 +25,12 @@
 
 #pragma once
 
+#if defined(ARDUINO) && ARDUINO >= 100
+  #include <Arduino.h>
+#else
+  #include <WProgram.h>
+#endif
+
 #include "singleton.h"
 
 class ButtonControl : public Singleton<ButtonControl>
@@ -37,8 +43,8 @@ private:
   friend class Singleton;
   ButtonControl();
 
-  unsigned int m_triggers;
+  byte m_triggers;
   unsigned long m_triggerTime;
-  int m_previousState;
-  int m_ledState;
+  bool m_previousState;
+  bool m_ledState;
 };

@@ -186,6 +186,9 @@ Display::Display() : mLedControl(DisplayDataPin, DisplayClkPin, DisplayCsPin,2)
   B00000000,
   B00000000,
   B00000000}
+  , m_acceleration(0)
+  , m_battery(0)
+  , m_speed(0)
 {
   mLedControl.shutdown(0, false);
   mLedControl.setIntensity(0, 0);
@@ -196,31 +199,30 @@ Display::Display() : mLedControl(DisplayDataPin, DisplayClkPin, DisplayCsPin,2)
   mLedControl.clearDisplay(1);  
 }
 
-void Display::drawAccelerationLevel(unsigned char level)
+void Display::drawAccelerationLevel()
 {
-  if (level > 10) {
-    level = 10;
+  if (m_acceleration > 10) {
+    m_acceleration = 10;
   }
   
-  for (int i = 0; i < 6; i++) {
+  for (byte i = 0; i < 6; ++i) {
     mDisplayBuffer[8 + i] = 0;
-    if (level > 0) {
-      byte value = pgm_read_byte(&(AcceleratorLevel[level - 1][i]));
-      mDisplayBuffer[8 + i] = value;
+    if (m_acceleration > 0) {
+      mDisplayBuffer[8 + i] = pgm_read_byte(&(AcceleratorLevel[m_acceleration - 1][i]));
     }
   }
 }
 
 
-void Display::drawSpeed(unsigned char number)
+void Display::drawSpeed()
 {
-  if (number > 99) {
-    number = 99;
+  if (m_speed > 99) {
+    m_speed = 99;
   }
-  unsigned char tens = number / 10;
-  unsigned char ones = number % 10;
+  byte tens = m_speed / 10;
+  byte ones = m_speed % 10;
 
-  for (int i = 0; i < 5; i++) {
+  for (byte i = 0; i < 5; ++i) {
     mDisplayBuffer[i] = 0;
     byte tensDigit = pgm_read_byte(&(Digit[tens][i]));
     byte onesDigit = pgm_read_byte(&(Digit[ones][i]));
@@ -228,17 +230,17 @@ void Display::drawSpeed(unsigned char number)
   }
 }
 
-void Display::drawBatteryLevel(unsigned char level)
+void Display::drawBatteryLevel()
 { 
-  if (level > 5) {
-    level = 5;
+  if (m_battery > 5) {
+    m_battery = 5;
   }
 
   mDisplayBuffer[6] = 0;
   mDisplayBuffer[7] = 0;
 
   byte batteryLevelChar = pgm_read_byte(&(BatteryLevel));
-  for (unsigned char i = 0; i < level; ++i) {
+  for (byte i = 0; i < m_battery; ++i) {
     mDisplayBuffer[6] |= batteryLevelChar << i;
     mDisplayBuffer[7] |= batteryLevelChar << (i + 1);
   }
@@ -246,12 +248,11 @@ void Display::drawBatteryLevel(unsigned char level)
 
 void Display::updateDisplayBuffer()
 {
-  for(int i = 0; i < 8; i++) {
+  drawAccelerationLevel();
+  drawSpeed();
+  drawBatteryLevel();
+  for(byte i = 0; i < 8; ++i) {
     mLedControl.setColumn(1, i, mDisplayBuffer[i]);    
-  }
-
-  
-  for(int i = 0; i < 8; i++) {
     mLedControl.setColumn(0, i, mDisplayBuffer[i + 8]);    
   }
 }

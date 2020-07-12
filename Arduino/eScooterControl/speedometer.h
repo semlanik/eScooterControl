@@ -24,6 +24,12 @@
  */
 #pragma once
 
+#if defined(ARDUINO) && ARDUINO >= 100
+  #include <Arduino.h>
+#else
+  #include <WProgram.h>
+#endif
+
 #include "singleton.h"
 
 class Display;
@@ -37,9 +43,9 @@ private:
   Speedometer();
   friend class Singleton;
   
-  unsigned int mMomentSpeed;
+  byte mMomentSpeed;
   unsigned long mLastHallTime;
-  unsigned int mHallCounter;//TODO: Not used for now, need for moment speed correction
+  byte mHallCounter;//TODO: Not used for now, need for moment speed correction
   
   Display *mDisplay;
 };

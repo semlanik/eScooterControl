@@ -25,30 +25,37 @@
 
 #pragma once
 
+#if defined(ARDUINO) && ARDUINO >= 100
+  #include <Arduino.h>
+#else
+  #include <WProgram.h>
+#endif
+
 #include "singleton.h"
 
 class AccelerationControl : public Singleton<AccelerationControl>
 {
 public:
-  void dispatch(unsigned long);
+  void dispatch();
   void dispatchAcceleration();
 private:
   AccelerationControl();
   friend class Singleton;
 
-  void setAccelerationLevel(int level);
-  int readAcceleratorData();
+  void setAccelerationLevel(const byte level);
+  byte readAcceleratorData();
   void updateAcceleration();
   
   void stop();
 
-  unsigned int m_stopState;
+  bool m_stopState;
   
-  int m_acceleratorMinValue;
-  unsigned int m_accelerationLevel;
+  unsigned int m_acceleratorMinValue;
+  byte m_accelerationLevel;
+  
   unsigned short m_expectedAcceleration;
   unsigned short m_actualAcceleration;
 
   unsigned long m_cruiseTime;
-  unsigned int m_cruiseLevel;
+  byte m_cruiseLevel;
 };

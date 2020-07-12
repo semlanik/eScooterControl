@@ -33,8 +33,8 @@
 
 //Two pins used by Wire library for I2C bus
 //Are not used in code directly. Keep here as reminder.
-const int I2CSDA = A4;
-const int I2CSCL = A5;
+const int I2CSDAPin = A4;
+const int I2CSCLPin = A5;
 
 const int ButtonPin = 4;
 const int PowerPin = 5;
@@ -42,7 +42,7 @@ const int PowerPin = 5;
 const int LedPin = 6;
 
 const int HallSensorPin = 2;
-const int PulsePerCircle = 45;
+const byte PulsePerCircle = 45;
 
 const int StopSensorPin = 3;
 
@@ -53,8 +53,8 @@ const int DisplayClkPin = 12;
 const int AcceleratorSensorPin = A0;
 
 //Align accelerator trigger values
-const int AcceleratorSensorDiff = 548;
+const unsigned int AcceleratorSensorDiff = 548;
 
-const int CruiseTime = 3000; //ms
+const unsigned long CruiseTime = 3000; //ms
 
 const uint8_t AcceleratorAddress = 0x60;

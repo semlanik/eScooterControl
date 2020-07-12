@@ -43,17 +43,16 @@ ButtonControl::ButtonControl() : m_triggers(0)
 }
 
 void ButtonControl::dispatch() {
-  int state = digitalRead(ButtonPin);
+  unsigned long currentTime = millis();
+  bool state = digitalRead(ButtonPin);
   if (m_previousState == HIGH && state == LOW) {
     if (m_triggers == 0) {
-      m_triggerTime = millis();
+      m_triggerTime = currentTime;
     }
     ++m_triggers;
   }
 
   m_previousState = state;
-
-  unsigned long currentTime = millis();
 
   if ((currentTime - m_triggerTime) >= ReactionTime) {
     if (m_triggers == 1 && state == LOW) {

@@ -30,7 +30,7 @@
   #include <WProgram.h>
 #endif
 
-typedef void (*threadCallback)(unsigned long);
+typedef void (*threadCallback)();
 
 class Thread {
 public:
@@ -49,6 +49,6 @@ private:
   threadCallback mCallback;
   unsigned long mLastCallTime;
   
-  static unsigned char sThreadSlots;
+  static byte sThreadSlots;
   static Thread* sThreadPool[8];
 };

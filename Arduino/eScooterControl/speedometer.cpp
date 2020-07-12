@@ -58,7 +58,7 @@ void Speedometer::attachToDisplay(Display *display) {
 void Speedometer::incrementHallCounter()
 {
   mHallCounter++;
-  int currentTick = mHallCounter % PulsePerCircle;
+  byte currentTick = mHallCounter % PulsePerCircle;
   if (currentTick == 0) {
     mHallCounter = 0;
     unsigned long currentTime = millis();
@@ -66,7 +66,7 @@ void Speedometer::incrementHallCounter()
     mLastHallTime = currentTime;
   
     if (mDisplay != nullptr) {
-      mDisplay->drawSpeed(mMomentSpeed);
+      mDisplay->setSpeed(mMomentSpeed);
     }
   }
 }

@@ -31,15 +31,32 @@
 class Display : public Singleton<Display>
 {
 public:
-  void drawAccelerationLevel(unsigned char level);
-  void drawSpeed(unsigned char number);
-  void drawBatteryLevel(unsigned char level);
   void updateDisplayBuffer();
+
+  void setAcceleration(byte level) {
+    m_acceleration = level;
+  }
+
+  void setSpeed(byte speed) {
+    m_speed = speed;
+  }
+
+  void setBatteryLevel(byte level) {
+    m_battery = level;
+  }
 
 private:
   Display();
   friend class Singleton;
 
+  void drawAccelerationLevel();
+  void drawSpeed();
+  void drawBatteryLevel();
+  
   byte mDisplayBuffer[16];
   LedControl mLedControl;
+
+  byte m_acceleration;
+  byte m_battery;
+  byte m_speed;
 };

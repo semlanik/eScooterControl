@@ -28,7 +28,6 @@
 #include "accelerationcontrol.h"
 #include "buttoncontrol.h"
 
-/* we always wait a bit between updates of the display */
 const unsigned long AcceleratorPedalUpdateTime = 200;
 const unsigned long AcceleratorUpdateTime = 10;
 const unsigned long DisplayUpdateTime = 250;
@@ -49,11 +48,11 @@ void setup() {
 
   delay(1000);
   AccelerationControl::instance();
-  gAcceleratorPedalThread.assignCallback([](unsigned long time){
-    AccelerationControl::instance()->dispatch(time);
+  gAcceleratorPedalThread.assignCallback([](){
+    AccelerationControl::instance()->dispatch();
   });
 
-  gAcceleratorThread.assignCallback([](unsigned long){
+  gAcceleratorThread.assignCallback([](){
     AccelerationControl::instance()->dispatchAcceleration();
   });
 
@@ -62,12 +61,12 @@ void setup() {
 
   delay(500);
   Display::instance();
-  gDisplayThread.assignCallback([](unsigned long){
+  gDisplayThread.assignCallback([](){
     Display::instance()->updateDisplayBuffer();
   });
 
-  gBatteryThread.assignCallback([](unsigned long){
-    Display::instance()->drawBatteryLevel(fakeBatteryLevel);
+  gBatteryThread.assignCallback([](){
+    Display::instance()->setBatteryLevel(fakeBatteryLevel);
     fakeBatteryLevel++;
     if (fakeBatteryLevel > 5) {
       fakeBatteryLevel = 0;
@@ -75,7 +74,7 @@ void setup() {
   });
 
   ButtonControl::instance();
-  gButtonThread.assignCallback([](unsigned long){
+  gButtonThread.assignCallback([](){
     ButtonControl::instance()->dispatch();
   });
 //  Serial.println("Init complete");

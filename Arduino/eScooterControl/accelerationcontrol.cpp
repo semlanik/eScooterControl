@@ -32,6 +32,7 @@
 
 const int AcceleratorSensorStep = 10;
 const int AcceleratorStep = 21;//From 0 to 4095 for 2s with update each 10ms
+const int MaxLevel = 10;
 
 const PROGMEM unsigned short AccelerationLevelTable[11] = {
   0,
@@ -47,9 +48,6 @@ const PROGMEM unsigned short AccelerationLevelTable[11] = {
   4095
 };
 
-const int AcceleratorSensorDivider = AcceleratorSensorDiff * AcceleratorSensorStep;
-
-const int MaxLevel = 100/AcceleratorSensorStep;
 
 AccelerationControl::AccelerationControl() : m_stopState(HIGH)
   , m_acceleratorMinValue(0)
@@ -62,7 +60,7 @@ AccelerationControl::AccelerationControl() : m_stopState(HIGH)
   Wire.begin();
   pinMode(AcceleratorSensorPin, INPUT);
   pinMode(StopSensorPin, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(StopSensorPin), [](){
+  attachInterrupt(digitalPinToInterrupt(StopSensorPin), []() {
     AccelerationControl::instance()->stop();
   }, CHANGE);
 
@@ -71,7 +69,7 @@ AccelerationControl::AccelerationControl() : m_stopState(HIGH)
 }
 
 
-void AccelerationControl::setAccelerationLevel(const int level)
+void AccelerationControl::setAccelerationLevel(const byte level)
 {
   if (level == m_accelerationLevel) {
     if (m_cruiseLevel < m_accelerationLevel
@@ -89,7 +87,7 @@ void AccelerationControl::setAccelerationLevel(const int level)
   m_accelerationLevel = level;
 }
 
-void AccelerationControl::dispatch(unsigned long)
+void AccelerationControl::dispatch()
 {  
   if (m_stopState == HIGH) {
     setAccelerationLevel(readAcceleratorData());
@@ -105,20 +103,18 @@ void AccelerationControl::stop() {
   }
 }
 
-int AccelerationControl::readAcceleratorData()
+byte AccelerationControl::readAcceleratorData()
 {
-  int value = analogRead(AcceleratorSensorPin);
+  unsigned int value = analogRead(AcceleratorSensorPin);
   if (value < m_acceleratorMinValue) {
     m_acceleratorMinValue = value; //Andjust min value accordingly
   }
 //  Serial.print("Accelerator sensor: ");
 //  Serial.print(value);
 //  Serial.print(" ");
-  int outValue = round(100.0*(value - m_acceleratorMinValue)/AcceleratorSensorDivider);
+  byte outValue = round(MaxLevel * float(value - m_acceleratorMinValue) / AcceleratorSensorDiff);
   if (outValue > MaxLevel) {
     outValue = MaxLevel;
-  } else if (outValue < 0) {
-    outValue = 0;
   }
 //  Serial.println(outValue);
   return outValue;
@@ -128,12 +124,12 @@ void AccelerationControl::updateAcceleration() {
 //  Serial.print("Acceleration level: ");
 //  Serial.println(m_accelerationLevel);
 
-  int level = m_accelerationLevel;
+  byte level = m_accelerationLevel;
   if (m_cruiseLevel > 0) {//At cruise control
     level = m_cruiseLevel;
   }
 
-  Display::instance()->drawAccelerationLevel(level);
+  Display::instance()->setAcceleration(level);
 
   m_expectedAcceleration = pgm_read_word(&AccelerationLevelTable[level]);
 //  Serial.print("Expected acceleration: ");
@@ -149,11 +145,6 @@ void AccelerationControl::dispatchAcceleration()
   if (m_actualAcceleration > m_expectedAcceleration) {
     //No need to step down, set acceleration immediatelly
     m_actualAcceleration = m_expectedAcceleration;
-//    if (m_actualAcceleration > AcceleratorStep) {
-//      m_actualAcceleration -= AcceleratorStep;
-//    } else {
-//      m_actualAcceleration = 0;
-//    }
   } else if (m_actualAcceleration < m_expectedAcceleration) {
     m_actualAcceleration += AcceleratorStep;
     if (m_actualAcceleration > 0x0fff) {
