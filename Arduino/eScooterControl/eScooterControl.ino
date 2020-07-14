@@ -51,6 +51,12 @@ void setup() {
     ButtonControl::instance()->dispatch();
   });
 
+  delay(500);
+  Display::instance();
+  gDisplayThread.assignCallback([](){
+    Display::instance()->updateDisplayBuffer();
+  });
+
   delay(1000);
   AccelerationControl::instance();
   gAcceleratorPedalThread.assignCallback([](){
@@ -62,13 +68,7 @@ void setup() {
   });
 
   delay(500);
-  Speedometer::instance()->attachToDisplay(Display::instance());
-
-  delay(500);
-  Display::instance();
-  gDisplayThread.assignCallback([](){
-    Display::instance()->updateDisplayBuffer();
-  });
+  Speedometer::instance();
 
   gBatteryThread.assignCallback([](){
     Display::instance()->setBatteryLevel(fakeBatteryLevel);

@@ -32,11 +32,9 @@
 
 #include "singleton.h"
 
-class Display;
-
 class Speedometer : public Singleton<Speedometer> {
 public:
-  void attachToDisplay(Display *display);
+  void attachToDisplay();
   void incrementHallCounter();
 
 private:
@@ -46,6 +44,4 @@ private:
   byte mMomentSpeed;
   unsigned long mLastHallTime;
   byte mHallCounter;//TODO: Not used for now, need for moment speed correction
-  
-  Display *mDisplay;
 };

@@ -45,14 +45,9 @@ void callback() {
 Speedometer::Speedometer() : mMomentSpeed(0)
  ,mLastHallTime(0)
  ,mHallCounter(0)
- ,mDisplay(nullptr)
 {
   pinMode(HallSensorPin, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(HallSensorPin), callback, RISING);
-}
-
-void Speedometer::attachToDisplay(Display *display) {
-  mDisplay = display;
 }
 
 void Speedometer::incrementHallCounter()
@@ -65,8 +60,6 @@ void Speedometer::incrementHallCounter()
     mMomentSpeed = TireLengthCoef / (currentTime - mLastHallTime);
     mLastHallTime = currentTime;
   
-    if (mDisplay != nullptr) {
-      mDisplay->setSpeed(mMomentSpeed);
-    }
+    Display::instance()->setSpeed(mMomentSpeed);
   }
 }
