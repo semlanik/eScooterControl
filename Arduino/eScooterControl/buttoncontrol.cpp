@@ -28,6 +28,7 @@
 #include "display.h"
 
 const unsigned long ReactionTime = 700;
+const unsigned long LongReactionTime = 500;
 
 /*
  * Do not use interruption here because film buttons have false positives in case of bad contact. 
@@ -41,6 +42,7 @@ ButtonControl::ButtonControl() : m_triggers(0)
   pinMode(LedPin, OUTPUT);
   pinMode(PowerPin, OUTPUT);
   pinMode(ButtonPin, INPUT_PULLUP);
+  digitalWrite(PowerPin, HIGH);
 }
 
 void ButtonControl::dispatch() {
@@ -53,24 +55,22 @@ void ButtonControl::dispatch() {
     ++m_triggers;
   }
 
+  unsigned long timeDiff = currentTime - m_triggerTime;
   m_previousState = state;
-
-  if ((currentTime - m_triggerTime) >= ReactionTime) {
-    if (m_triggers == 1 && state == LOW) {
+  if (state == LOW && timeDiff >= LongReactionTime && m_triggers == 1) {
 //      Serial.println("Power off");
-      digitalWrite(PowerPin, HIGH);
-    } else if (m_triggers == 1 && state == HIGH) {
+    //TODO: Prohibit switch off if speed > 0 || throttle is no at 0
+    digitalWrite(PowerPin, LOW);    
+  } else if (timeDiff >= ReactionTime && state == HIGH) {
+    if (m_triggers == 1) {
 //      Serial.println("Toggle led");
       toggleLedState();
-    } else if (m_triggers == 2 && state == HIGH) {
+    } else if (m_triggers == 2) {
 //      Serial.println("Toggle eco");
       //TODO: Enable eco mode
     }
-    
-    if (state == HIGH) {
-      //Action finished reset number of triggers
-      m_triggers = 0;
-    }
+    //Action finished reset number of triggers
+    m_triggers = 0;
   }
 }
 

@@ -46,6 +46,11 @@ void setup() {
 //  Serial.begin(115200);
 //  Serial.println("Init");
 
+  ButtonControl::instance();
+  gButtonThread.assignCallback([](){
+    ButtonControl::instance()->dispatch();
+  });
+
   delay(1000);
   AccelerationControl::instance();
   gAcceleratorPedalThread.assignCallback([](){
@@ -73,10 +78,6 @@ void setup() {
     }
   });
 
-  ButtonControl::instance();
-  gButtonThread.assignCallback([](){
-    ButtonControl::instance()->dispatch();
-  });
 //  Serial.println("Init complete");
 }
 
