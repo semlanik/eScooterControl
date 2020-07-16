@@ -49,7 +49,7 @@ const PROGMEM unsigned short AccelerationLevelTable[11] = {
 };
 
 
-AccelerationControl::AccelerationControl() : m_stopState(HIGH)
+AccelerationControl::AccelerationControl() : m_stopState(LOW)
   , m_acceleratorMinValue(0)
   , m_accelerationLevel(0)
   , m_expectedAcceleration(0)
@@ -59,7 +59,7 @@ AccelerationControl::AccelerationControl() : m_stopState(HIGH)
 {
   Wire.begin();
   pinMode(AcceleratorSensorPin, INPUT);
-  pinMode(StopSensorPin, INPUT_PULLUP);
+  pinMode(StopSensorPin, INPUT);
   attachInterrupt(digitalPinToInterrupt(StopSensorPin), []() {
     AccelerationControl::instance()->stop();
   }, CHANGE);
@@ -89,7 +89,7 @@ void AccelerationControl::setAccelerationLevel(const byte level)
 
 void AccelerationControl::dispatch()
 {  
-  if (m_stopState == HIGH) {
+  if (m_stopState == LOW) {
     setAccelerationLevel(readAcceleratorData());
   }
   updateAcceleration();
@@ -97,8 +97,8 @@ void AccelerationControl::dispatch()
 
 void AccelerationControl::stop() {
   m_stopState = digitalRead(StopSensorPin);
-  Display::instance()->setStop(!m_stopState);
-  if (m_stopState == LOW) {
+  Display::instance()->setStop(m_stopState);
+  if (m_stopState == HIGH) {
     m_cruiseLevel = 0; //reset cruise when stop
     setAccelerationLevel(0);
   }
