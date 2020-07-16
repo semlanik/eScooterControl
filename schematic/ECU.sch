@@ -8937,9 +8937,9 @@ BUZZER</description>
 <attribute name="NAME" x="-35.306" y="48.26" size="1.778" layer="95" font="vector" rot="MR270"/>
 <attribute name="VALUE" x="-30.48" y="40.386" size="1.778" layer="96" font="vector" rot="MR270"/>
 </instance>
-<instance part="R3" gate="G$1" x="132.08" y="22.86" smashed="yes" rot="R180">
-<attribute name="NAME" x="135.89" y="21.3614" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="135.89" y="26.162" size="1.778" layer="96" rot="R180"/>
+<instance part="R3" gate="G$1" x="121.92" y="35.56" smashed="yes" rot="R180">
+<attribute name="NAME" x="125.73" y="34.0614" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="125.73" y="38.862" size="1.778" layer="96" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -9014,8 +9014,8 @@ BUZZER</description>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="127" y1="22.86" x2="121.92" y2="22.86" width="0.1524" layer="91"/>
-<label x="121.92" y="22.86" size="1.778" layer="95"/>
+<wire x1="116.84" y1="35.56" x2="106.68" y2="35.56" width="0.1524" layer="91"/>
+<label x="109.22" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VIN" class="0">
@@ -9096,6 +9096,11 @@ BUZZER</description>
 <wire x1="25.4" y1="93.98" x2="10.16" y2="93.98" width="0.1524" layer="91"/>
 <label x="10.16" y="93.98" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="2"/>
+<label x="129.54" y="27.94" size="1.778" layer="95"/>
+<wire x1="137.16" y1="27.94" x2="129.54" y2="27.94" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="THIN" class="0">
 <segment>
@@ -9144,10 +9149,20 @@ BUZZER</description>
 <pinref part="J1" gate="G$1" pin="1"/>
 <label x="134.62" y="30.48" size="1.778" layer="95"/>
 <label x="45.72" y="55.88" size="1.778" layer="95"/>
-<wire x1="137.16" y1="30.48" x2="66.04" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="30.48" x2="134.62" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="30.48" x2="66.04" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="55.88" x2="45.72" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="D2"/>
 <wire x1="66.04" y1="55.88" x2="66.04" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="127" y1="35.56" x2="134.62" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="35.56" x2="134.62" y2="30.48" width="0.1524" layer="91"/>
+<junction x="134.62" y="30.48"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="4"/>
+<wire x1="137.16" y1="48.26" x2="129.54" y2="48.26" width="0.1524" layer="91"/>
+<label x="129.54" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="BTN" class="0">
@@ -9300,21 +9315,6 @@ BUZZER</description>
 <label x="10.16" y="58.42" size="1.778" layer="95"/>
 <pinref part="LS1" gate="G$1" pin="1"/>
 <wire x1="-27.94" y1="45.72" x2="2.54" y2="45.72" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="STOUT" class="0">
-<segment>
-<pinref part="J1" gate="G$1" pin="2"/>
-<wire x1="137.16" y1="27.94" x2="137.16" y2="22.86" width="0.1524" layer="91"/>
-<label x="129.54" y="27.94" size="1.778" layer="95"/>
-<pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="137.16" y1="27.94" x2="129.54" y2="27.94" width="0.1524" layer="91"/>
-<junction x="137.16" y="27.94"/>
-</segment>
-<segment>
-<pinref part="J2" gate="G$1" pin="4"/>
-<wire x1="137.16" y1="48.26" x2="129.54" y2="48.26" width="0.1524" layer="91"/>
-<label x="129.54" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

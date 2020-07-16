@@ -8977,9 +8977,10 @@ BUZZER</description>
 <label x="119.38" y="5.08" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="124.46" y1="71.12" x2="124.46" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="71.12" x2="124.46" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G$1" pin="S"/>
-<wire x1="121.92" y1="66.04" x2="124.46" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="68.58" x2="124.46" y2="68.58" width="0.1524" layer="91"/>
+<label x="114.3" y="68.58" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="J5" gate="J$1" pin="3"/>

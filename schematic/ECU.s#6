@@ -9190,7 +9190,7 @@ BUZZER</description>
 <wire x1="45.72" y1="60.96" x2="106.68" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="60.96" x2="106.68" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="J2" gate="G$1" pin="5"/>
-<label x="127" y="45.72" size="1.778" layer="95"/>
+<label x="124.46" y="45.72" size="1.778" layer="95"/>
 <wire x1="106.68" y1="45.72" x2="137.16" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="D4"/>
 </segment>
