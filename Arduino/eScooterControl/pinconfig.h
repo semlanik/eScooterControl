@@ -36,15 +36,20 @@
 const int I2CSDAPin = A4;
 const int I2CSCLPin = A5;
 
-const int ButtonPin = 4;
-const int PowerPin = 5;
+const int ButtonPin = 7;
+const int PowerPin = 8;
 
-const int LedPin = 6;
+const int LedPin = 9;
+const int StopLedPin = 4;
 
-const int HallSensorPin = 2;
+const int HallSensorPin = 3;
 const byte PulsePerCircle = 45;
 
-const int StopSensorPin = 3;
+const int StopSensorPin = 2;
+
+const int Speaker = A6;
+
+const int BatteryPin = A2;
 
 const int DisplayDataPin = 10;
 const int DisplayCsPin = 11;
