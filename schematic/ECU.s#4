@@ -8981,8 +8981,8 @@ BUZZER</description>
 <attribute name="NAME" x="-71.12" y="76.708" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="C1" gate="G$1" x="0" y="93.98" smashed="yes">
-<attribute name="NAME" x="-5.08" y="93.98" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-5.08" y="88.9" size="1.778" layer="96"/>
+<attribute name="NAME" x="2.54" y="93.98" size="1.778" layer="95"/>
+<attribute name="VALUE" x="2.54" y="88.9" size="1.778" layer="96"/>
 </instance>
 <instance part="J6" gate="G$1" x="144.78" y="88.9" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="147.32" y="94.234" size="1.778" layer="96" font="vector" rot="MR0"/>

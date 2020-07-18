@@ -8942,7 +8942,7 @@ BUZZER</description>
 <part name="C3" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" deviceset="C" device="CHIP-1206(3216-METRIC)" package3d_urn="urn:adsk.eagle:package:16290893/2" technology="_" value="1uF"/>
 <part name="Q1" library="Transistor" library_urn="urn:adsk.eagle:library:16378713" deviceset="NMOSFET" device="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2"/>
 <part name="LS1" library="SparkFun-Electromechanical" library_urn="urn:adsk.eagle:library:516" deviceset="BUZZER" device="-PTH_KIT" package3d_urn="urn:adsk.eagle:package:38556/1"/>
-<part name="R3" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R1206" package3d_urn="urn:adsk.eagle:package:13301/1" value="100K"/>
+<part name="R3" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R1206" package3d_urn="urn:adsk.eagle:package:13301/1" value="10K"/>
 <part name="D4" library="eScooter" deviceset="TVS_DIODE" device="SMA" package3d_urn="urn:adsk.eagle:package:21928182/1"/>
 <part name="D5" library="eScooter" deviceset="TVS_DIODE" device="SMA" package3d_urn="urn:adsk.eagle:package:21928182/1"/>
 <part name="D6" library="eScooter" deviceset="TVS_DIODE" device="SMA" package3d_urn="urn:adsk.eagle:package:21928182/1"/>

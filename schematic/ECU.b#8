@@ -1123,7 +1123,7 @@ design rules under a new name.</description>
 <attribute name="SF_SKU" value="COM-07950" x="12.7" y="7.81" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="12.7" y="2.222" size="0.6096" layer="27" font="vector" ratio="20" rot="R180" align="top-center"/>
 </element>
-<element name="R3" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R1206" package3d_urn="urn:adsk.eagle:package:13301/1" value="100K" x="17" y="24" smashed="yes" rot="MR0">
+<element name="R3" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R1206" package3d_urn="urn:adsk.eagle:package:13301/1" value="10K" x="17" y="24" smashed="yes" rot="MR0">
 <attribute name="NAME" x="18.27" y="25.27" size="1.27" layer="26" rot="MR0"/>
 <attribute name="SPICEMODEL" value="NONE" x="17" y="24" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="17" y="24" size="1.778" layer="28" rot="MR0" display="off"/>
@@ -1155,7 +1155,7 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="R" x="21" y="39.5" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="VALUE" x="19.73" y="42.04" size="1.27" layer="28" rot="MR180"/>
 </element>
-<element name="R5" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R1206" package3d_urn="urn:adsk.eagle:package:13301/1" value="100K" x="21" y="63" smashed="yes" rot="MR0">
+<element name="R5" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R1206" package3d_urn="urn:adsk.eagle:package:13301/1" value="10K" x="21" y="63" smashed="yes" rot="MR0">
 <attribute name="NAME" x="22.27" y="64.27" size="1.27" layer="26" rot="MR0"/>
 <attribute name="SPICEMODEL" value="NONE" x="21" y="63" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="21" y="63" size="1.778" layer="28" rot="MR0" display="off"/>
@@ -1272,7 +1272,6 @@ design rules under a new name.</description>
 <wire x1="5.08" y1="75.12" x2="6.1876" y2="76.2276" width="0.8128" layer="16"/>
 <wire x1="8.97" y1="76.39" x2="8.8076" y2="76.2276" width="0.8128" layer="16"/>
 <wire x1="8.8076" y1="76.2276" x2="6.1876" y2="76.2276" width="0.8128" layer="16"/>
-<wire x1="8.7571" y1="49.8" x2="8.7571" y2="48.53" width="0.8128" layer="1"/>
 <via x="8.7571" y="49.8" extent="1-16" drill="0.35"/>
 <wire x1="2.54" y1="52.8" x2="6.2571" y2="52.8" width="0.8128" layer="16"/>
 <wire x1="6.2571" y1="52.8" x2="8.7571" y2="50.3" width="0.8128" layer="16"/>
@@ -1294,8 +1293,8 @@ design rules under a new name.</description>
 <wire x1="4.191" y1="53.451" x2="4.191" y2="61.579" width="0.8128" layer="1"/>
 <contactref element="U1" pad="12"/>
 <wire x1="6.55" y1="41.84" x2="7.84" y2="41.84" width="0.8128" layer="1"/>
-<wire x1="7.84" y1="41.84" x2="8.7571" y2="42.7571" width="0.8128" layer="1"/>
-<wire x1="8.7571" y1="42.7571" x2="8.7571" y2="49.8" width="0.8128" layer="1"/>
+<wire x1="8.7571" y1="42.7571" x2="7.84" y2="41.84" width="0.8128" layer="1"/>
+<wire x1="8.7571" y1="49.8" x2="8.7571" y2="42.7571" width="0.8128" layer="1"/>
 </signal>
 <signal name="THIN">
 <contactref element="C1" pad="2"/>
@@ -1322,15 +1321,13 @@ design rules under a new name.</description>
 </signal>
 <signal name="SCL">
 <contactref element="J7" pad="4"/>
-<wire x1="2.54" y1="47.72" x2="3.29" y2="47.72" width="0.8128" layer="1"/>
 <contactref element="U1" pad="9"/>
 <wire x1="4.96" y1="49.46" x2="6.55" y2="49.46" width="0.8128" layer="1"/>
-<wire x1="2.54" y1="47.72" x2="3.22" y2="47.72" width="0.8128" layer="1"/>
 <wire x1="3.22" y1="47.72" x2="4.96" y2="49.46" width="0.8128" layer="1"/>
+<wire x1="3.22" y1="47.72" x2="2.54" y2="47.72" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SP">
 <contactref element="Q5" pad="3"/>
-<wire x1="21.86" y1="44.47" x2="21.86" y2="44.64" width="0.8128" layer="16"/>
 <contactref element="U1" pad="21"/>
 <wire x1="22.45" y1="46.92" x2="20.42" y2="46.92" width="0.8128" layer="1"/>
 <wire x1="20.42" y1="46.92" x2="20" y2="46.5" width="0.8128" layer="1"/>
