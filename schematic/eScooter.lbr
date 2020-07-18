@@ -341,7 +341,7 @@ Source: http://www.avagotech.com/docs/AV02-0410EN</description>
 <pin name="D11" x="15.24" y="15.24" length="middle" rot="R180"/>
 <pin name="D12" x="15.24" y="17.78" length="middle" rot="R180"/>
 <text x="-5.08" y="22.86" size="1.778" layer="95">&gt;NAME</text>
-<text x="-5.08" y="-25.4" size="1.778" layer="96">VALUE</text>
+<text x="-5.08" y="-25.4" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 <symbol name="BUZZER">
 <wire x1="2.54" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>

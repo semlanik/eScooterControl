@@ -486,10 +486,14 @@ Source: http://www.avagotech.com/docs/AV02-0410EN</description>
 <deviceset name="TVS_DIODE">
 <description>TVS protective diode</description>
 <gates>
-<gate name="G$1" symbol="TVS_DIODE" x="0" y="0"/>
+<gate name="D$1" symbol="TVS_DIODE" x="0" y="0"/>
 </gates>
 <devices>
 <device name="SMA" package="DIOM5027X220N">
+<connects>
+<connect gate="D$1" pin="P$1" pad="1"/>
+<connect gate="D$1" pin="P$2" pad="2"/>
+</connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:21928182/1"/>
 </package3dinstances>

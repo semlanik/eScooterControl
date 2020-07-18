@@ -219,6 +219,21 @@ Source: http://www.avagotech.com/docs/AV02-0410EN</description>
 <text x="2.2" y="7.1" size="1.27" layer="25">&gt;NAME</text>
 <text x="2" y="-8" size="1.27" layer="27">&gt;VALUE</text>
 </package>
+<package name="DIOM5027X220N" urn="urn:adsk.eagle:footprint:21928331/1">
+<description>Molded Body, 5.00 X 2.70 X 2.20 mm body
+&lt;p&gt;Molded Body package with body size 5.00 X 2.70 X 2.20 mm&lt;/p&gt;</description>
+<wire x1="2.5" y1="1.35" x2="-3.3699" y2="1.35" width="0.12" layer="21"/>
+<wire x1="-3.3699" y1="1.35" x2="-3.3699" y2="-1.35" width="0.12" layer="21"/>
+<wire x1="-3.3699" y1="-1.35" x2="2.5" y2="-1.35" width="0.12" layer="21"/>
+<wire x1="2.5" y1="-1.35" x2="-2.5" y2="-1.35" width="0.12" layer="51"/>
+<wire x1="-2.5" y1="-1.35" x2="-2.5" y2="1.35" width="0.12" layer="51"/>
+<wire x1="-2.5" y1="1.35" x2="2.5" y2="1.35" width="0.12" layer="51"/>
+<wire x1="2.5" y1="1.35" x2="2.5" y2="-1.35" width="0.12" layer="51"/>
+<smd name="1" x="-2.1" y="0" dx="1.9118" dy="1.5118" layer="1"/>
+<smd name="2" x="2.1" y="0" dx="1.9118" dy="1.5118" layer="1"/>
+<text x="0" y="1.985" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.985" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="DIP8" urn="urn:adsk.eagle:package:8089856/1" locally_modified="yes" type="box">
@@ -253,6 +268,13 @@ Source: http://www.avagotech.com/docs/AV02-0410EN</description>
 &lt;p&gt;30-pin SON (DFN) package with 2.54 mm pitch with body size 43.00 X 17.50 X 1.20 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="SON254P1750X4300X120-30M"/>
+</packageinstances>
+</package3d>
+<package3d name="DIOM5027X220N" urn="urn:adsk.eagle:package:21928182/1" type="model">
+<description>Molded Body, 5.00 X 2.70 X 2.20 mm body
+&lt;p&gt;Molded Body package with body size 5.00 X 2.70 X 2.20 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="DIOM5027X220N"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -464,10 +486,17 @@ Source: http://www.avagotech.com/docs/AV02-0410EN</description>
 <deviceset name="TVS_DIODE">
 <description>TVS protective diode</description>
 <gates>
-<gate name="G$1" symbol="TVS_DIODE" x="0" y="0"/>
+<gate name="D1" symbol="TVS_DIODE" x="0" y="0"/>
 </gates>
 <devices>
-<device name="">
+<device name="SMA" package="DIOM5027X220N">
+<connects>
+<connect gate="D1" pin="P$1" pad="1"/>
+<connect gate="D1" pin="P$2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:21928182/1"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
