@@ -941,7 +941,7 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="C1" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPC3216X135" package3d_urn="urn:adsk.eagle:package:16290893/2" value="1uF" x="9.43" y="58.23" smashed="yes" rot="MR90">
+<element name="C1" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPC3216X135" package3d_urn="urn:adsk.eagle:package:16290893/2" value="0.1uF" x="9.43" y="58.23" smashed="yes" rot="MR90">
 <attribute name="CATEGORY" value="Capacitor" x="-47.72" y="105.22" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MANUFACTURER" value="" x="-47.72" y="105.22" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MPN" value="" x="-47.72" y="105.22" size="1.778" layer="28" rot="MR90" display="off"/>
@@ -956,7 +956,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="7.5733" y="58.23" size="1.27" layer="28" rot="MR90" align="top-center"/>
 <attribute name="VOLTAGE_RATING" value="" x="-47.72" y="105.22" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
-<element name="C3" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPC3216X135" package3d_urn="urn:adsk.eagle:package:16290893/2" value="1uF" x="17.62" y="13.95" smashed="yes" rot="MR90">
+<element name="C3" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPC3216X135" package3d_urn="urn:adsk.eagle:package:16290893/2" value="0.1uF" x="17.62" y="13.95" smashed="yes" rot="MR90">
 <attribute name="CATEGORY" value="Capacitor" x="-39.53" y="66.02" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MANUFACTURER" value="" x="-39.53" y="66.02" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MPN" value="" x="-39.53" y="66.02" size="1.778" layer="28" rot="MR90" display="off"/>
@@ -1324,7 +1324,7 @@ design rules under a new name.</description>
 <contactref element="U1" pad="9"/>
 <wire x1="4.96" y1="49.46" x2="6.55" y2="49.46" width="0.8128" layer="1"/>
 <wire x1="3.22" y1="47.72" x2="4.96" y2="49.46" width="0.8128" layer="1"/>
-<wire x1="3.22" y1="47.72" x2="2.54" y2="47.72" width="0" layer="19" extent="1-1"/>
+<wire x1="2.54" y1="47.72" x2="3.22" y2="47.72" width="0.8128" layer="1"/>
 </signal>
 <signal name="SP">
 <contactref element="Q5" pad="3"/>

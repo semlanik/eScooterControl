@@ -1293,7 +1293,6 @@ design rules under a new name.</description>
 <wire x1="50.48" y1="26.99" x2="48.58" y2="28.89" width="0.8128" layer="1"/>
 <contactref element="R6" pad="1"/>
 <wire x1="50.48" y1="26.99" x2="50.53259375" y2="26.93740625" width="0.8128" layer="1"/>
-<wire x1="49.53" y1="24.13" x2="49.682" y2="24.13" width="0.8128" layer="1"/>
 <wire x1="50.48" y1="26.99" x2="50.48" y2="24.928" width="0.8128" layer="1"/>
 <wire x1="50.48" y1="24.928" x2="49.682" y2="24.13" width="0.8128" layer="1"/>
 </signal>

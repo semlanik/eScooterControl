@@ -941,7 +941,7 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="C1" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPC3216X135" package3d_urn="urn:adsk.eagle:package:16290893/2" value="1uF" x="9.43" y="58.23" smashed="yes" rot="MR90">
+<element name="C1" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPC3216X135" package3d_urn="urn:adsk.eagle:package:16290893/2" value="0.1uF" x="9.43" y="58.23" smashed="yes" rot="MR90">
 <attribute name="CATEGORY" value="Capacitor" x="-47.72" y="105.22" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MANUFACTURER" value="" x="-47.72" y="105.22" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MPN" value="" x="-47.72" y="105.22" size="1.778" layer="28" rot="MR90" display="off"/>
@@ -956,7 +956,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="7.5733" y="58.23" size="1.27" layer="28" rot="MR90" align="top-center"/>
 <attribute name="VOLTAGE_RATING" value="" x="-47.72" y="105.22" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
-<element name="C3" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPC3216X135" package3d_urn="urn:adsk.eagle:package:16290893/2" value="1uF" x="17.62" y="13.95" smashed="yes" rot="MR90">
+<element name="C3" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPC3216X135" package3d_urn="urn:adsk.eagle:package:16290893/2" value="0.1uF" x="17.62" y="13.95" smashed="yes" rot="MR90">
 <attribute name="CATEGORY" value="Capacitor" x="-39.53" y="66.02" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MANUFACTURER" value="" x="-39.53" y="66.02" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="MPN" value="" x="-39.53" y="66.02" size="1.778" layer="28" rot="MR90" display="off"/>
@@ -1161,7 +1161,7 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="R" x="21" y="63" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="22.27" y="60.46" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="C2" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPC3216X135" package3d_urn="urn:adsk.eagle:package:16290893/2" value="1uF" x="12.5" y="29" smashed="yes" rot="R180">
+<element name="C2" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPC3216X135" package3d_urn="urn:adsk.eagle:package:16290893/2" value="0.1uF" x="12.5" y="29" smashed="yes" rot="R180">
 <attribute name="CATEGORY" value="Capacitor" x="12.5" y="29" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MANUFACTURER" value="" x="12.5" y="29" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="12.5" y="29" size="1.778" layer="27" rot="R180" display="off"/>
