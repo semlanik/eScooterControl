@@ -6374,7 +6374,7 @@ grid 2.54 mm</description>
 <part name="U1" library="regulator" deviceset="MAX5035" device="DIP8" package3d_urn="urn:adsk.eagle:package:8089856/1"/>
 <part name="J4" library="Connectors" library_urn="urn:adsk.eagle:library:14555660" deviceset="B2P-VH(LF)(SN)" device="" package3d_urn="urn:adsk.eagle:package:10989917/2" value="IN"/>
 <part name="C1" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" deviceset="C" device="CHIP-1206(3216-METRIC)" package3d_urn="urn:adsk.eagle:package:16290893/2" technology="_"/>
-<part name="D1" library="Diodes" library_urn="urn:adsk.eagle:library:11396254" deviceset="MBR360G" device="" package3d_urn="urn:adsk.eagle:package:10898389/2" value="SB 5100"/>
+<part name="D1" library="Diodes" library_urn="urn:adsk.eagle:library:11396254" deviceset="MBR360G" device="" package3d_urn="urn:adsk.eagle:package:10898389/2" value=""/>
 <part name="L1" library="inductors" library_urn="urn:adsk.eagle:library:243" deviceset="DR127" device="" package3d_urn="urn:adsk.eagle:package:15117/1"/>
 <part name="C2" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" deviceset="C" device="CHIP-1206(3216-METRIC)" package3d_urn="urn:adsk.eagle:package:16290893/2" technology="_"/>
 <part name="C3" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" deviceset="C-POL" device="TANTALUM-2917(7343-METRIC)" package3d_urn="urn:adsk.eagle:package:16290885/1" technology="_"/>

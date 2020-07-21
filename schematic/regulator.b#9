@@ -899,7 +899,7 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="C1" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPC3216X135" package3d_urn="urn:adsk.eagle:package:16290893/2" value="" x="29.21" y="16.51" smashed="yes" rot="R180">
+<element name="C1" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPC3216X135" package3d_urn="urn:adsk.eagle:package:16290893/2" value="0.1uF" x="29.21" y="16.51" smashed="yes" rot="R180">
 <attribute name="CATEGORY" value="Capacitor" x="8.89" y="60.96" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MANUFACTURER" value="" x="8.89" y="60.96" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="8.89" y="60.96" size="1.778" layer="27" rot="R180" display="off"/>
@@ -914,7 +914,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="29.21" y="18.3667" size="1.27" layer="27" rot="R180" align="top-center"/>
 <attribute name="VOLTAGE_RATING" value="" x="8.89" y="60.96" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C2" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPC3216X135" package3d_urn="urn:adsk.eagle:package:16290893/2" value="" x="36.83" y="24.13" smashed="yes" rot="R270">
+<element name="C2" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPC3216X135" package3d_urn="urn:adsk.eagle:package:16290893/2" value="0.1uF" x="36.83" y="24.13" smashed="yes" rot="R270">
 <attribute name="CATEGORY" value="Capacitor" x="-7.62" y="-1.27" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MANUFACTURER" value="" x="-7.62" y="-1.27" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="-7.62" y="-1.27" size="1.778" layer="27" rot="R270" display="off"/>
@@ -929,7 +929,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="34.9733" y="24.13" size="1.27" layer="27" rot="R270" align="top-center"/>
 <attribute name="VOLTAGE_RATING" value="" x="-7.62" y="-1.27" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C3" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPMP7343X310N" package3d_urn="urn:adsk.eagle:package:16290885/1" value="" x="49.53" y="6.35" smashed="yes" rot="R270">
+<element name="C3" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" package="CAPMP7343X310N" package3d_urn="urn:adsk.eagle:package:16290885/1" value="15uF" x="49.53" y="6.35" smashed="yes" rot="R270">
 <attribute name="CATEGORY" value="Capacitor" x="13.97" y="-26.67" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MANUFACTURER" value="" x="13.97" y="-26.67" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="13.97" y="-26.67" size="1.778" layer="27" rot="R270" display="off"/>
@@ -944,7 +944,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="46.595" y="6.35" size="1.27" layer="27" rot="R270" align="top-center"/>
 <attribute name="VOLTAGE_RATING" value="" x="13.97" y="-26.67" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="D1" library="Diodes" library_urn="urn:adsk.eagle:library:11396254" package="DO201AD" package3d_urn="urn:adsk.eagle:package:10898389/2" value="MBR360G" x="22.86" y="6.35" smashed="yes" rot="R180">
+<element name="D1" library="Diodes" library_urn="urn:adsk.eagle:library:11396254" package="DO201AD" package3d_urn="urn:adsk.eagle:package:10898389/2" value="SB5100" x="22.86" y="6.35" smashed="yes" rot="R180">
 <attribute name="CREATED_BY" value="PCBLayout.com" x="2.54" y="44.45" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DIGIKEY_PART_NUMBER" value="MBR360GOS-ND" x="2.54" y="44.45" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MANUFACTURER" value="ON Semiconductor" x="2.54" y="44.45" size="1.778" layer="27" rot="R180" display="off"/>

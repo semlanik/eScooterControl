@@ -144,101 +144,6 @@
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
-<library name="regulator">
-<packages>
-<package name="DIP8" urn="urn:adsk.eagle:footprint:4470/1">
-<description>&lt;b&gt;SMD DIL08&lt;/b&gt; Gull Wing Surface Mount Optioon 300&lt;p&gt;
-Source: http://www.avagotech.com/docs/AV02-0410EN</description>
-<wire x1="-4.81" y1="-3.075" x2="4.81" y2="-3.075" width="0.2032" layer="51"/>
-<wire x1="4.81" y1="-3.075" x2="4.81" y2="3.075" width="0.2032" layer="21"/>
-<wire x1="4.81" y1="3.075" x2="-4.81" y2="3.075" width="0.2032" layer="51"/>
-<wire x1="-4.81" y1="3.075" x2="-4.81" y2="-3.075" width="0.2032" layer="21"/>
-<circle x="-3.81" y="-2.159" radius="0.3667" width="0" layer="21"/>
-<smd name="1" x="-3.81" y="-4.45" dx="1.16" dy="2" layer="1"/>
-<smd name="2" x="-1.27" y="-4.45" dx="1.27" dy="2" layer="1"/>
-<smd name="3" x="1.27" y="-4.45" dx="1.27" dy="2" layer="1"/>
-<smd name="4" x="3.81" y="-4.45" dx="1.16" dy="2" layer="1"/>
-<smd name="5" x="3.81" y="4.45" dx="1.16" dy="2" layer="1"/>
-<smd name="6" x="1.27" y="4.45" dx="1.27" dy="2" layer="1"/>
-<smd name="7" x="-1.27" y="4.45" dx="1.27" dy="2" layer="1"/>
-<smd name="8" x="-3.81" y="4.45" dx="1.16" dy="2" layer="1"/>
-<text x="-5.635" y="-3.1351" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="6.905" y="-4.4051" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-<rectangle x1="-4.0899" y1="-4.825" x2="-3.5301" y2="-3.81" layer="51"/>
-<rectangle x1="-1.5499" y1="-4.825" x2="-0.9901" y2="-3.81" layer="51"/>
-<rectangle x1="0.9901" y1="-4.825" x2="1.5499" y2="-3.81" layer="51"/>
-<rectangle x1="3.5301" y1="-4.825" x2="4.0899" y2="-3.81" layer="51"/>
-<rectangle x1="3.5301" y1="3.81" x2="4.0899" y2="4.825" layer="51"/>
-<rectangle x1="0.9901" y1="3.81" x2="1.5499" y2="4.825" layer="51"/>
-<rectangle x1="-1.5499" y1="3.81" x2="-0.9901" y2="4.825" layer="51"/>
-<rectangle x1="-4.0899" y1="3.81" x2="-3.5301" y2="4.825" layer="51"/>
-<rectangle x1="-2.15" y1="3.1" x2="-0.4" y2="3.81" layer="51" rot="R180"/>
-<rectangle x1="-4.1" y1="3.1" x2="-2.94" y2="3.81" layer="51" rot="R180"/>
-<rectangle x1="0.39" y1="3.1" x2="2.14" y2="3.81" layer="51" rot="R180"/>
-<rectangle x1="2.93" y1="3.1" x2="4.1" y2="3.81" layer="51" rot="R180"/>
-<rectangle x1="-4.075" y1="-3.81" x2="-2.93" y2="-3.1" layer="51"/>
-<rectangle x1="-2.14" y1="-3.81" x2="-0.39" y2="-3.1" layer="51"/>
-<rectangle x1="0.4" y1="-3.81" x2="2.15" y2="-3.1" layer="51"/>
-<rectangle x1="2.94" y1="-3.81" x2="4.1" y2="-3.1" layer="51"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="DIP8" urn="urn:adsk.eagle:package:8089856/1" locally_modified="yes" type="box">
-<description>&lt;b&gt;SMD DIL08&lt;/b&gt; &lt;p&gt;
-dual in line package'</description>
-<packageinstances>
-<packageinstance name="DIP8"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="MX5035">
-<description>The  MAX5035  easy-to-use,  high-efficiency,  high-volt-age,  step-down  DC-DC  converter  operates  from  aninput voltage up to 76V and consumes only 270μA qui-escent  current  at  no  load.</description>
-<wire x1="-10.16" y1="12.7" x2="10.16" y2="12.7" width="0.254" layer="94"/>
-<wire x1="10.16" y1="12.7" x2="10.16" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-12.7" x2="-10.16" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="-12.7" x2="-10.16" y2="12.7" width="0.254" layer="94"/>
-<pin name="BST" x="-15.24" y="7.62" length="middle" direction="in"/>
-<pin name="VD" x="-15.24" y="2.54" length="middle" direction="in"/>
-<pin name="SGND" x="-15.24" y="-2.54" length="middle" direction="in"/>
-<pin name="FB" x="-15.24" y="-7.62" length="middle" direction="in"/>
-<pin name="ON/OFF" x="15.24" y="-7.62" length="middle" direction="in" rot="R180"/>
-<pin name="GND" x="15.24" y="-2.54" length="middle" direction="pwr" rot="R180"/>
-<pin name="VIN" x="15.24" y="2.54" length="middle" direction="pwr" rot="R180"/>
-<pin name="LX" x="15.24" y="7.62" length="middle" direction="pwr" rot="R180"/>
-<text x="-10.16" y="15.24" size="1.778" layer="95">&gt;NAME</text>
-<text x="-10.16" y="-17.78" size="1.778" layer="96">&gt;VALUE</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="MAX5035">
-<description>The  MAX5035  easy-to-use,  high-efficiency,  high-volt-age,  step-down  DC-DC  converter  operates  from  aninput voltage up to 76V and consumes only 270μA qui-escent  current  at  no  load.</description>
-<gates>
-<gate name="G$1" symbol="MX5035" x="0" y="0"/>
-</gates>
-<devices>
-<device name="DIP8" package="DIP8">
-<connects>
-<connect gate="G$1" pin="BST" pad="1"/>
-<connect gate="G$1" pin="FB" pad="4"/>
-<connect gate="G$1" pin="GND" pad="6"/>
-<connect gate="G$1" pin="LX" pad="8"/>
-<connect gate="G$1" pin="ON/OFF" pad="5"/>
-<connect gate="G$1" pin="SGND" pad="3"/>
-<connect gate="G$1" pin="VD" pad="2"/>
-<connect gate="G$1" pin="VIN" pad="7"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8089856/1"/>
-</package3dinstances>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="Connectors" urn="urn:adsk.eagle:library:14555660">
 <description>&lt;h3&gt; PCBLayout.com - Frequently Used &lt;i&gt;Connectors&lt;/i&gt;&lt;/h3&gt;
 
@@ -6276,6 +6181,66 @@ grid 2.54 mm</description>
 <text x="0" y="6.885" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-6.885" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
+<package name="DIP8" urn="urn:adsk.eagle:footprint:4470/1">
+<description>&lt;b&gt;SMD DIL08&lt;/b&gt; Gull Wing Surface Mount Optioon 300&lt;p&gt;
+Source: http://www.avagotech.com/docs/AV02-0410EN</description>
+<wire x1="-4.81" y1="-3.075" x2="4.81" y2="-3.075" width="0.2032" layer="51"/>
+<wire x1="4.81" y1="-3.075" x2="4.81" y2="3.075" width="0.2032" layer="21"/>
+<wire x1="4.81" y1="3.075" x2="-4.81" y2="3.075" width="0.2032" layer="51"/>
+<wire x1="-4.81" y1="3.075" x2="-4.81" y2="-3.075" width="0.2032" layer="21"/>
+<circle x="-3.81" y="-2.159" radius="0.3667" width="0" layer="21"/>
+<smd name="1" x="-3.81" y="-4.45" dx="1.16" dy="2" layer="1"/>
+<smd name="2" x="-1.27" y="-4.45" dx="1.27" dy="2" layer="1"/>
+<smd name="3" x="1.27" y="-4.45" dx="1.27" dy="2" layer="1"/>
+<smd name="4" x="3.81" y="-4.45" dx="1.16" dy="2" layer="1"/>
+<smd name="5" x="3.81" y="4.45" dx="1.16" dy="2" layer="1"/>
+<smd name="6" x="1.27" y="4.45" dx="1.27" dy="2" layer="1"/>
+<smd name="7" x="-1.27" y="4.45" dx="1.27" dy="2" layer="1"/>
+<smd name="8" x="-3.81" y="4.45" dx="1.16" dy="2" layer="1"/>
+<text x="-5.635" y="-3.1351" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="6.905" y="-4.4051" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-4.0899" y1="-4.825" x2="-3.5301" y2="-3.81" layer="51"/>
+<rectangle x1="-1.5499" y1="-4.825" x2="-0.9901" y2="-3.81" layer="51"/>
+<rectangle x1="0.9901" y1="-4.825" x2="1.5499" y2="-3.81" layer="51"/>
+<rectangle x1="3.5301" y1="-4.825" x2="4.0899" y2="-3.81" layer="51"/>
+<rectangle x1="3.5301" y1="3.81" x2="4.0899" y2="4.825" layer="51"/>
+<rectangle x1="0.9901" y1="3.81" x2="1.5499" y2="4.825" layer="51"/>
+<rectangle x1="-1.5499" y1="3.81" x2="-0.9901" y2="4.825" layer="51"/>
+<rectangle x1="-4.0899" y1="3.81" x2="-3.5301" y2="4.825" layer="51"/>
+<rectangle x1="-2.15" y1="3.1" x2="-0.4" y2="3.81" layer="51" rot="R180"/>
+<rectangle x1="-4.1" y1="3.1" x2="-2.94" y2="3.81" layer="51" rot="R180"/>
+<rectangle x1="0.39" y1="3.1" x2="2.14" y2="3.81" layer="51" rot="R180"/>
+<rectangle x1="2.93" y1="3.1" x2="4.1" y2="3.81" layer="51" rot="R180"/>
+<rectangle x1="-4.075" y1="-3.81" x2="-2.93" y2="-3.1" layer="51"/>
+<rectangle x1="-2.14" y1="-3.81" x2="-0.39" y2="-3.1" layer="51"/>
+<rectangle x1="0.4" y1="-3.81" x2="2.15" y2="-3.1" layer="51"/>
+<rectangle x1="2.94" y1="-3.81" x2="4.1" y2="-3.1" layer="51"/>
+</package>
+<package name="DIP826W56P254L937H458Q8B" urn="urn:adsk.eagle:footprint:22059849/1">
+<description>8-DIP, 2.54 mm (0.10 in) pitch, 8.26 mm (0.33 in) span, 9.38 X 6.99 X 4.58 mm body
+&lt;p&gt;8-pin DIP package with 2.54 mm (0.10 in) pitch, 8.26 mm (0.33 in) span with body size 9.38 X 6.99 X 4.58 mm&lt;/p&gt;</description>
+<circle x="-5.3669" y="3.81" radius="0.25" width="0" layer="21"/>
+<wire x1="-3.935" y1="4.7969" x2="-3.935" y2="4.955" width="0.12" layer="21"/>
+<wire x1="-3.935" y1="4.955" x2="3.935" y2="4.955" width="0.12" layer="21"/>
+<wire x1="3.935" y1="4.955" x2="3.935" y2="4.7969" width="0.12" layer="21"/>
+<wire x1="-3.935" y1="-4.7969" x2="-3.935" y2="-4.955" width="0.12" layer="21"/>
+<wire x1="-3.935" y1="-4.955" x2="3.935" y2="-4.955" width="0.12" layer="21"/>
+<wire x1="3.935" y1="-4.955" x2="3.935" y2="-4.7969" width="0.12" layer="21"/>
+<wire x1="3.935" y1="-4.955" x2="-3.935" y2="-4.955" width="0.12" layer="51"/>
+<wire x1="-3.935" y1="-4.955" x2="-3.935" y2="4.955" width="0.12" layer="51"/>
+<wire x1="-3.935" y1="4.955" x2="3.935" y2="4.955" width="0.12" layer="51"/>
+<wire x1="3.935" y1="4.955" x2="3.935" y2="-4.955" width="0.12" layer="51"/>
+<pad name="1" x="-4.13" y="3.81" drill="0.8657" diameter="1.4657"/>
+<pad name="2" x="-4.13" y="1.27" drill="0.8657" diameter="1.4657"/>
+<pad name="3" x="-4.13" y="-1.27" drill="0.8657" diameter="1.4657"/>
+<pad name="4" x="-4.13" y="-3.81" drill="0.8657" diameter="1.4657"/>
+<pad name="5" x="4.13" y="-3.81" drill="0.8657" diameter="1.4657"/>
+<pad name="6" x="4.13" y="-1.27" drill="0.8657" diameter="1.4657"/>
+<pad name="7" x="4.13" y="1.27" drill="0.8657" diameter="1.4657"/>
+<pad name="8" x="4.13" y="3.81" drill="0.8657" diameter="1.4657"/>
+<text x="0" y="5.59" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-5.59" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="DIOM5027X220N" urn="urn:adsk.eagle:package:21928182/1" type="model">
@@ -6290,6 +6255,20 @@ grid 2.54 mm</description>
 &lt;p&gt;ECAP (Aluminum Electrolytic Capacitor) package with body size 12.30 X 12.50 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="CAPAE1230X1250N"/>
+</packageinstances>
+</package3d>
+<package3d name="DIP8" urn="urn:adsk.eagle:package:8089856/1" locally_modified="yes" type="box">
+<description>&lt;b&gt;SMD DIL08&lt;/b&gt; &lt;p&gt;
+dual in line package'</description>
+<packageinstances>
+<packageinstance name="DIP8"/>
+</packageinstances>
+</package3d>
+<package3d name="DIP826W56P254L937H458Q8B" urn="urn:adsk.eagle:package:22059831/1" type="model">
+<description>8-DIP, 2.54 mm (0.10 in) pitch, 8.26 mm (0.33 in) span, 9.38 X 6.99 X 4.58 mm body
+&lt;p&gt;8-pin DIP package with 2.54 mm (0.10 in) pitch, 8.26 mm (0.33 in) span with body size 9.38 X 6.99 X 4.58 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="DIP826W56P254L937H458Q8B"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -6317,6 +6296,23 @@ grid 2.54 mm</description>
 <text x="-3.81" y="1.27" size="1.778" layer="94">+</text>
 <text x="2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
 <text x="2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="MX5035">
+<description>The  MAX5035  easy-to-use,  high-efficiency,  high-volt-age,  step-down  DC-DC  converter  operates  from  aninput voltage up to 76V and consumes only 270μA qui-escent  current  at  no  load.</description>
+<wire x1="-10.16" y1="12.7" x2="10.16" y2="12.7" width="0.254" layer="94"/>
+<wire x1="10.16" y1="12.7" x2="10.16" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-12.7" x2="-10.16" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-12.7" x2="-10.16" y2="12.7" width="0.254" layer="94"/>
+<pin name="BST" x="-15.24" y="7.62" length="middle" direction="in"/>
+<pin name="VD" x="-15.24" y="2.54" length="middle" direction="in"/>
+<pin name="SGND" x="-15.24" y="-2.54" length="middle" direction="in"/>
+<pin name="FB" x="-15.24" y="-7.62" length="middle" direction="in"/>
+<pin name="ON/OFF" x="15.24" y="-7.62" length="middle" direction="in" rot="R180"/>
+<pin name="GND" x="15.24" y="-2.54" length="middle" direction="pwr" rot="R180"/>
+<pin name="VIN" x="15.24" y="2.54" length="middle" direction="pwr" rot="R180"/>
+<pin name="LX" x="15.24" y="7.62" length="middle" direction="pwr" rot="R180"/>
+<text x="-10.16" y="15.24" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-17.78" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -6359,6 +6355,50 @@ grid 2.54 mm</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="MAX5035">
+<description>The  MAX5035  easy-to-use,  high-efficiency,  high-volt-age,  step-down  DC-DC  converter  operates  from  aninput voltage up to 76V and consumes only 270μA qui-escent  current  at  no  load.</description>
+<gates>
+<gate name="G$1" symbol="MX5035" x="0" y="0"/>
+</gates>
+<devices>
+<device name="DIP8" package="DIP8">
+<connects>
+<connect gate="G$1" pin="BST" pad="1"/>
+<connect gate="G$1" pin="FB" pad="4"/>
+<connect gate="G$1" pin="GND" pad="6"/>
+<connect gate="G$1" pin="LX" pad="8"/>
+<connect gate="G$1" pin="ON/OFF" pad="5"/>
+<connect gate="G$1" pin="SGND" pad="3"/>
+<connect gate="G$1" pin="VD" pad="2"/>
+<connect gate="G$1" pin="VIN" pad="7"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8089856/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="PDIP8" package="DIP826W56P254L937H458Q8B">
+<connects>
+<connect gate="G$1" pin="BST" pad="1"/>
+<connect gate="G$1" pin="FB" pad="4"/>
+<connect gate="G$1" pin="GND" pad="6"/>
+<connect gate="G$1" pin="LX" pad="8"/>
+<connect gate="G$1" pin="ON/OFF" pad="5"/>
+<connect gate="G$1" pin="SGND" pad="3"/>
+<connect gate="G$1" pin="VD" pad="2"/>
+<connect gate="G$1" pin="VIN" pad="7"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:22059831/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -6371,7 +6411,6 @@ grid 2.54 mm</description>
 </class>
 </classes>
 <parts>
-<part name="U1" library="regulator" deviceset="MAX5035" device="DIP8" package3d_urn="urn:adsk.eagle:package:8089856/1"/>
 <part name="J4" library="Connectors" library_urn="urn:adsk.eagle:library:14555660" deviceset="B2P-VH(LF)(SN)" device="" package3d_urn="urn:adsk.eagle:package:10989917/2" value="IN"/>
 <part name="C1" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" deviceset="C" device="CHIP-1206(3216-METRIC)" package3d_urn="urn:adsk.eagle:package:16290893/2" technology="_" value="0.1uF"/>
 <part name="D1" library="Diodes" library_urn="urn:adsk.eagle:library:11396254" deviceset="MBR360G" device="" package3d_urn="urn:adsk.eagle:package:10898389/2" value="SB5100"/>
@@ -6396,16 +6435,13 @@ grid 2.54 mm</description>
 <part name="D2" library="eScooter" deviceset="TVS_DIODE" device="SMA" package3d_urn="urn:adsk.eagle:package:21928182/1" value="P4SMAJ12CA"/>
 <part name="R8" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R1206" package3d_urn="urn:adsk.eagle:package:13301/1" value="10K"/>
 <part name="C4" library="eScooter" deviceset="C" device="PANASONIC_H13" package3d_urn="urn:adsk.eagle:package:21812541/1" value="68uF"/>
+<part name="U$1" library="eScooter" deviceset="MAX5035" device="PDIP8" package3d_urn="urn:adsk.eagle:package:22059831/1"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="U1" gate="G$1" x="132.08" y="101.6" smashed="yes">
-<attribute name="NAME" x="129.54" y="116.84" size="1.778" layer="95"/>
-<attribute name="VALUE" x="121.92" y="86.36" size="1.778" layer="96"/>
-</instance>
 <instance part="J4" gate="G$1" x="213.36" y="116.84" smashed="yes" rot="MR0">
 <attribute name="NAME" x="215.9" y="122.682" size="1.778" layer="95" rot="MR0"/>
 </instance>
@@ -6496,6 +6532,10 @@ grid 2.54 mm</description>
 <attribute name="NAME" x="162.56" y="109.22" size="1.778" layer="95"/>
 <attribute name="VALUE" x="162.56" y="104.14" size="1.778" layer="96" rot="MR180"/>
 </instance>
+<instance part="U$1" gate="G$1" x="132.08" y="101.6" smashed="yes">
+<attribute name="NAME" x="121.92" y="116.84" size="1.778" layer="95"/>
+<attribute name="VALUE" x="121.92" y="83.82" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -6544,7 +6584,6 @@ grid 2.54 mm</description>
 <wire x1="200.66" y1="132.08" x2="223.52" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="J3" gate="G$1" pin="2"/>
 <wire x1="187.96" y1="91.44" x2="187.96" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="GND"/>
 <wire x1="160.02" y1="99.06" x2="160.02" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="147.32" y1="99.06" x2="160.02" y2="99.06" width="0.1524" layer="91"/>
 <junction x="160.02" y="99.06"/>
@@ -6566,7 +6605,6 @@ grid 2.54 mm</description>
 <wire x1="208.28" y1="119.38" x2="200.66" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="132.08" x2="223.52" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="33.02" x2="78.74" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="SGND"/>
 <wire x1="116.84" y1="99.06" x2="101.6" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="99.06" x2="101.6" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="104.14" x2="104.14" y2="104.14" width="0.1524" layer="91"/>
@@ -6579,6 +6617,8 @@ grid 2.54 mm</description>
 <junction x="78.74" y="66.04"/>
 <junction x="78.74" y="33.02"/>
 <pinref part="C4" gate="G$1" pin="P$2"/>
+<pinref part="U$1" gate="G$1" pin="SGND"/>
+<pinref part="U$1" gate="G$1" pin="GND"/>
 </segment>
 </net>
 <net name="VIN" class="0">
@@ -6586,7 +6626,6 @@ grid 2.54 mm</description>
 <pinref part="Q2" gate="G$1" pin="D"/>
 <wire x1="48.26" y1="50.8" x2="48.26" y2="58.42" width="0.1524" layer="91"/>
 <label x="53.34" y="53.34" size="1.778" layer="95"/>
-<pinref part="U1" gate="G$1" pin="VIN"/>
 <wire x1="147.32" y1="104.14" x2="154.94" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="116.84" x2="182.88" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
@@ -6605,15 +6644,16 @@ grid 2.54 mm</description>
 <junction x="205.74" y="116.84"/>
 <pinref part="C4" gate="G$1" pin="P$1"/>
 <label x="147.32" y="104.14" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="VIN"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="BST"/>
 <wire x1="116.84" y1="109.22" x2="114.3" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="109.22" x2="114.3" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="114.3" y1="124.46" x2="127" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="BST"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -6622,7 +6662,6 @@ grid 2.54 mm</description>
 <wire x1="134.62" y1="124.46" x2="137.16" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="124.46" x2="149.86" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="124.46" x2="149.86" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="LX"/>
 <wire x1="149.86" y1="109.22" x2="147.32" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="132.08" x2="137.16" y2="124.46" width="0.1524" layer="91"/>
 <junction x="137.16" y="124.46"/>
@@ -6631,6 +6670,7 @@ grid 2.54 mm</description>
 <wire x1="137.16" y1="132.08" x2="127" y2="132.08" width="0.1524" layer="91"/>
 <junction x="137.16" y="132.08"/>
 <pinref part="L1" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="G$1" pin="LX"/>
 </segment>
 </net>
 <net name="12V" class="0">
@@ -6638,7 +6678,6 @@ grid 2.54 mm</description>
 <pinref part="L1" gate="G$1" pin="2"/>
 <wire x1="111.76" y1="132.08" x2="99.06" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="132.08" x2="99.06" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="FB"/>
 <wire x1="99.06" y1="93.98" x2="116.84" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="132.08" x2="91.44" y2="132.08" width="0.1524" layer="91"/>
 <junction x="99.06" y="132.08"/>
@@ -6655,18 +6694,18 @@ grid 2.54 mm</description>
 <pinref part="D2" gate="D$1" pin="P$1"/>
 <wire x1="78.74" y1="132.08" x2="78.74" y2="124.46" width="0.1524" layer="91"/>
 <junction x="78.74" y="132.08"/>
+<pinref part="U$1" gate="G$1" pin="FB"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="C2" gate="G$1" pin="2"/>
-<pinref part="U1" gate="G$1" pin="VD"/>
 <wire x1="111.76" y1="104.14" x2="116.84" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="VD"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="ON/OFF"/>
 <wire x1="147.32" y1="93.98" x2="182.88" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="182.88" y1="96.52" x2="182.88" y2="93.98" width="0.1524" layer="91"/>
@@ -6675,6 +6714,7 @@ grid 2.54 mm</description>
 <pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="J3" gate="G$1" pin="1"/>
 <wire x1="182.88" y1="93.98" x2="187.96" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="ON/OFF"/>
 </segment>
 </net>
 <net name="N$7" class="0">

@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -341,7 +341,7 @@ Source: http://www.avagotech.com/docs/AV02-0410EN</description>
 <pin name="D11" x="15.24" y="15.24" length="middle" rot="R180"/>
 <pin name="D12" x="15.24" y="17.78" length="middle" rot="R180"/>
 <text x="-5.08" y="22.86" size="1.778" layer="95">&gt;NAME</text>
-<text x="-5.08" y="-25.4" size="1.778" layer="96">VALUE</text>
+<text x="-5.08" y="-25.4" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 <symbol name="BUZZER">
 <wire x1="2.54" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
