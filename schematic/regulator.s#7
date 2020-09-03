@@ -6520,7 +6520,7 @@ Feel free to contact us at &lt;a href="mailto:Support@PCBLayout.com"&gt;Support@
 <part name="U$1" library="eScooter" deviceset="MAX5035" device="PDIP8" package3d_urn="urn:adsk.eagle:package:22059831/1"/>
 <part name="J4" library="eScooter" deviceset="XT60" device="" value="BATTERY"/>
 <part name="J6" library="eScooter" deviceset="XT60" device="" value="DRIVER POWER"/>
-<part name="Q4" library="Transistor" library_urn="urn:adsk.eagle:library:14522416" deviceset="FQD13N06LTM" device="" package3d_urn="urn:adsk.eagle:package:10893256/5"/>
+<part name="Q4" library="Transistor" library_urn="urn:adsk.eagle:library:14522416" deviceset="FQD13N06LTM" device="" package3d_urn="urn:adsk.eagle:package:10893256/5" value="IRFR3607PBF"/>
 </parts>
 <sheets>
 <sheet>

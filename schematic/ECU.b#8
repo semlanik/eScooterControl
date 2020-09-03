@@ -1075,9 +1075,9 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="R" x="17.5" y="24" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="18.77" y="21.46" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="D4" library="eScooter" package="DIOM5027X220N" package3d_urn="urn:adsk.eagle:package:21928182/1" value="TVS_DIODESMA" x="6.5" y="57" smashed="yes" rot="MR90">
-<attribute name="NAME" x="8.485" y="57" size="1.27" layer="26" rot="MR90" align="bottom-center"/>
-<attribute name="VALUE" x="4.515" y="57" size="1.27" layer="28" rot="MR90" align="top-center"/>
+<element name="D4" library="eScooter" package="DIOM5027X220N" package3d_urn="urn:adsk.eagle:package:21928182/1" value="TVS_DIODESMA" x="5.5" y="58" smashed="yes" rot="MR90">
+<attribute name="NAME" x="7.485" y="58" size="1.27" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="VALUE" x="3.515" y="58" size="1.27" layer="28" rot="MR90" align="top-center"/>
 </element>
 <element name="D5" library="eScooter" package="DIOM5027X220N" package3d_urn="urn:adsk.eagle:package:21928182/1" value="TVS_DIODESMA" x="19" y="18" smashed="yes" rot="MR90">
 <attribute name="NAME" x="20.985" y="18" size="1.27" layer="26" rot="MR90" align="bottom-center"/>
@@ -1263,11 +1263,11 @@ design rules under a new name.</description>
 <via x="9.66" y="61.92" extent="1-16" drill="0.35"/>
 <contactref element="D4" pad="2"/>
 <contactref element="J5" pad="1"/>
-<wire x1="2.54" y1="60.69" x2="6.5" y2="60.69" width="0.8128" layer="16"/>
-<wire x1="6.5" y1="60.69" x2="8" y2="60.69" width="0.8128" layer="16"/>
+<wire x1="2.54" y1="60.69" x2="5.5" y2="60.69" width="0.8128" layer="16"/>
+<wire x1="5.5" y1="60.69" x2="8" y2="60.69" width="0.8128" layer="16"/>
 <wire x1="8" y1="60.69" x2="8.43" y2="60.69" width="0.8128" layer="16"/>
 <wire x1="8.43" y1="60.69" x2="9.66" y2="61.92" width="0.8128" layer="16"/>
-<wire x1="6.5" y1="59.1" x2="6.5" y2="60.69" width="0.8128" layer="16"/>
+<wire x1="5.5" y1="60.1" x2="5.5" y2="60.69" width="0.8128" layer="16"/>
 <wire x1="8" y1="60.69" x2="9.43" y2="59.26" width="0.8128" layer="16"/>
 <wire x1="9.43" y1="59.26" x2="9.43" y2="59.2054" width="0.8128" layer="16"/>
 <contactref element="U1" pad="4"/>

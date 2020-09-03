@@ -6627,8 +6627,8 @@ Feel free to contact us at &lt;a href="mailto:Support@PCBLayout.com"&gt;Support@
 <attribute name="VALUE" x="208.28" y="40.64" size="1.778" layer="96"/>
 </instance>
 <instance part="Q4" gate="G$1" x="185.42" y="38.1" smashed="yes">
-<attribute name="NAME" x="176.53" y="43.18" size="1.778" layer="95"/>
-<attribute name="VALUE" x="173.99" y="30.48" size="1.778" layer="96"/>
+<attribute name="NAME" x="184.15" y="43.18" size="1.778" layer="95"/>
+<attribute name="VALUE" x="184.15" y="30.48" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
