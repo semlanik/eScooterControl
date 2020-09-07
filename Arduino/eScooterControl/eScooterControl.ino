@@ -27,6 +27,7 @@
 #include "speedometer.h"
 #include "accelerationcontrol.h"
 #include "buttoncontrol.h"
+#include "battery.h"
 
 const unsigned long AcceleratorPedalUpdateTime = 200;
 const unsigned long AcceleratorUpdateTime = 10;
@@ -71,11 +72,7 @@ void setup() {
   Speedometer::instance();
 
   gBatteryThread.assignCallback([](){
-    Display::instance()->setBatteryLevel(fakeBatteryLevel);
-    fakeBatteryLevel++;
-    if (fakeBatteryLevel > 6) {
-      fakeBatteryLevel = 0;
-    }
+    BatterySensor::instance()->dispatch();
   });
 
 //  Serial.println("Init complete");

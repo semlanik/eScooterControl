@@ -154,7 +154,7 @@ void AccelerationControl::dispatchAcceleration()
   }
 
   Wire.beginTransmission(AcceleratorAddress);
-  Wire.write(64);
+  Wire.write(0x40);
   Wire.write(m_actualAcceleration >> 4);
   Wire.write((m_actualAcceleration & 15) << 4);
   Wire.endTransmission();
