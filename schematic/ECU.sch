@@ -8816,14 +8816,14 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 <junction x="-12.7" y="-10.16"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="Q2" gate="G$1" pin="S"/>
-<wire x1="76.2" y1="-5.08" x2="88.9" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="-5.08" x2="88.9" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="-5.08" x2="88.9" y2="0" width="0.1524" layer="91"/>
 <label x="55.88" y="-10.16" size="1.778" layer="95"/>
 <wire x1="88.9" y1="0" x2="88.9" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="-10.16" x2="76.2" y2="-10.16" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="-5.08" x2="76.2" y2="-10.16" width="0.1524" layer="91"/>
-<junction x="76.2" y="-10.16"/>
-<wire x1="76.2" y1="-10.16" x2="66.04" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="-10.16" x2="73.66" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="-5.08" x2="73.66" y2="-10.16" width="0.1524" layer="91"/>
+<junction x="73.66" y="-10.16"/>
+<wire x1="73.66" y1="-10.16" x2="66.04" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="0" x2="88.9" y2="0" width="0.1524" layer="91"/>
 <junction x="88.9" y="0"/>
 <pinref part="D7" gate="D$1" pin="P$2"/>

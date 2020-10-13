@@ -8767,7 +8767,6 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 </instance>
 <instance part="SG1" gate="G$1" x="-68.58" y="38.1" smashed="yes" rot="R90">
 <attribute name="NAME" x="-74.93" y="35.56" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="-68.58" y="44.45" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>

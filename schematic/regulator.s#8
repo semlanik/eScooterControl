@@ -7378,7 +7378,7 @@ Source: http://www.irf.com/product-info/datasheets/data/irfr5305pbf.pdf</descrip
 <part name="R5" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R1206" package3d_urn="urn:adsk.eagle:package:13301/1" value="1M"/>
 <part name="Q5" library="Transistor" deviceset="PMOSFET" device="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" technology="_" value="PMOSFET"/>
 <part name="Q3" library="Transistor" deviceset="PMOSFET_" device="TO252AA" package3d_urn="urn:adsk.eagle:package:29503/2"/>
-<part name="R7" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R1206" package3d_urn="urn:adsk.eagle:package:13301/1" value="10K"/>
+<part name="R7" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R1206" package3d_urn="urn:adsk.eagle:package:13301/1" value="1K"/>
 <part name="Q4" library="Transistor" deviceset="NPN" device="SOT23" package3d_urn="urn:adsk.eagle:package:16378725/1" technology="_" value="NPN"/>
 </parts>
 <sheets>
