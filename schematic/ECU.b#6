@@ -1115,11 +1115,11 @@ design rules under a new name.</description>
 <attribute name="NAME" x="13.7" y="67.855" size="1.27" layer="25" align="bottom-center"/>
 <attribute name="VALUE" x="13.7" y="23.585" size="1.27" layer="27" align="top-center"/>
 </element>
-<element name="R3" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R1206" package3d_urn="urn:adsk.eagle:package:13301/1" value="10K" x="22" y="35" smashed="yes" rot="MR270">
-<attribute name="NAME" x="20.73" y="36.27" size="1.27" layer="26" rot="MR270"/>
-<attribute name="SPICEMODEL" value="NONE" x="22" y="35" size="1.778" layer="28" rot="MR270" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="22" y="35" size="1.778" layer="28" rot="MR270" display="off"/>
-<attribute name="VALUE" x="24.54" y="36.27" size="1.27" layer="28" rot="MR270"/>
+<element name="R3" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R1206" package3d_urn="urn:adsk.eagle:package:13301/1" value="10K" x="22" y="34" smashed="yes" rot="MR270">
+<attribute name="NAME" x="20.73" y="35.27" size="1.27" layer="26" rot="MR270"/>
+<attribute name="SPICEMODEL" value="NONE" x="22" y="34" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="SPICEPREFIX" value="R" x="22" y="34" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="VALUE" x="24.54" y="35.27" size="1.27" layer="28" rot="MR270"/>
 </element>
 <element name="D1" library="eScooter" package="DIOM5027X220N" package3d_urn="urn:adsk.eagle:package:21928182/1" value="TVS_DIODESMA" x="18" y="18" smashed="yes" rot="MR90">
 <attribute name="NAME" x="19.985" y="18" size="1.27" layer="26" rot="MR90" align="bottom-center"/>
@@ -1275,7 +1275,7 @@ design rules under a new name.</description>
 <wire x1="20.1" y1="24.85" x2="20.1" y2="22.5" width="0.6096" layer="16"/>
 <contactref element="J1" pad="2"/>
 <contactref element="R3" pad="2"/>
-<wire x1="22" y1="33.578" x2="22" y2="26.75" width="0.6096" layer="16"/>
+<wire x1="22" y1="32.578" x2="22" y2="26.75" width="0.6096" layer="16"/>
 <wire x1="22" y1="26.75" x2="20.1" y2="24.85" width="0.6096" layer="16"/>
 <wire x1="17.04" y1="22.5" x2="18" y2="22.5" width="0.6096" layer="16"/>
 <contactref element="D1" pad="2"/>
@@ -1451,7 +1451,7 @@ design rules under a new name.</description>
 <contactref element="R3" pad="1"/>
 <via x="21.65" y="38.1" extent="1-16" drill="0.35"/>
 <wire x1="21.65" y1="38.1" x2="22" y2="37.75" width="0.6096" layer="16"/>
-<wire x1="22" y1="37.75" x2="22" y2="36.422" width="0.6096" layer="16"/>
+<wire x1="22" y1="37.75" x2="22" y2="35.422" width="0.6096" layer="16"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

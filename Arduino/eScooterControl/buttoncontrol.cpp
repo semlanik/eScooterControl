@@ -42,7 +42,6 @@ ButtonControl::ButtonControl() : m_triggers(0)
   pinMode(LedPin, OUTPUT);
   pinMode(PowerPin, OUTPUT);
   pinMode(ButtonPin, INPUT_PULLUP);
-  digitalWrite(PowerPin, HIGH);
 }
 
 void ButtonControl::dispatch() {

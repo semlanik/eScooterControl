@@ -978,9 +978,9 @@ design rules under a new name.</description>
 <attribute name="NAME" x="10.325" y="9.1" size="1.27" layer="25" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="14.295" y="9.1" size="1.27" layer="27" rot="R90" align="top-center"/>
 </element>
-<element name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X02" package3d_urn="urn:adsk.eagle:package:38039/1" value="Break" x="17.5" y="21.5" smashed="yes" rot="R270">
-<attribute name="NAME" x="18.897" y="22.77" size="0.6096" layer="25" font="vector" ratio="20" rot="R270"/>
-<attribute name="VALUE" x="15.468" y="22.77" size="0.6096" layer="27" font="vector" ratio="20" rot="R270"/>
+<element name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X02" package3d_urn="urn:adsk.eagle:package:38039/1" value="Break" x="14.5" y="22.5" smashed="yes">
+<attribute name="NAME" x="13.23" y="23.897" size="0.6096" layer="25" font="vector" ratio="20"/>
+<attribute name="VALUE" x="13.23" y="20.468" size="0.6096" layer="27" font="vector" ratio="20"/>
 </element>
 <element name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X06" package3d_urn="urn:adsk.eagle:package:38009/1" value="COMM" x="22" y="6" smashed="yes" rot="R90">
 <attribute name="NAME" x="20.603" y="4.73" size="0.6096" layer="25" font="vector" ratio="20" rot="R90"/>
@@ -1121,9 +1121,9 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="R" x="22" y="35" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="VALUE" x="24.54" y="36.27" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="D1" library="eScooter" package="DIOM5027X220N" package3d_urn="urn:adsk.eagle:package:21928182/1" value="TVS_DIODESMA" x="8" y="-4" smashed="yes">
-<attribute name="NAME" x="8" y="-2.015" size="1.27" layer="25" align="bottom-center"/>
-<attribute name="VALUE" x="8" y="-5.985" size="1.27" layer="27" align="top-center"/>
+<element name="D1" library="eScooter" package="DIOM5027X220N" package3d_urn="urn:adsk.eagle:package:21928182/1" value="TVS_DIODESMA" x="18" y="18" smashed="yes" rot="MR90">
+<attribute name="NAME" x="19.985" y="18" size="1.27" layer="26" rot="MR90" align="bottom-center"/>
+<attribute name="VALUE" x="16.015" y="18" size="1.27" layer="28" rot="MR90" align="top-center"/>
 </element>
 </elements>
 <signals>
@@ -1196,8 +1196,9 @@ design rules under a new name.</description>
 <wire x1="17.07" y1="34.338" x2="17.21" y2="41.62" width="0" layer="19" extent="16-16"/>
 <wire x1="14" y1="33" x2="17.07" y2="34.338" width="0" layer="19" extent="16-16"/>
 <wire x1="16" y1="28" x2="14" y2="33" width="0" layer="19" extent="1-1"/>
-<wire x1="17.5" y1="21.5" x2="16" y2="28" width="0" layer="19" extent="1-1"/>
-<wire x1="14.2606" y1="19.2512" x2="17.5" y2="21.5" width="0" layer="19" extent="1-1"/>
+<wire x1="14.5" y1="22.5" x2="16" y2="28" width="0" layer="19" extent="1-1"/>
+<wire x1="14.2606" y1="19.2512" x2="14.5" y2="22.5" width="0" layer="19" extent="1-1"/>
+<wire x1="18" y1="15.9" x2="14.5" y2="22.5" width="0" layer="19" extent="16-16"/>
 <wire x1="14.2606" y1="12.7488" x2="14.2606" y2="19.2512" width="0" layer="19" extent="1-1"/>
 <wire x1="14.81" y1="10.16" x2="14.2606" y2="12.7488" width="0" layer="19" extent="1-1"/>
 <wire x1="18" y1="8.4754" x2="14.81" y2="10.16" width="0" layer="19" extent="1-1"/>
@@ -1209,7 +1210,6 @@ design rules under a new name.</description>
 <wire x1="2" y1="58.96" x2="7.79" y2="64.2" width="0" layer="19" extent="16-16"/>
 <wire x1="5.75" y1="30.48" x2="14" y2="33" width="0" layer="19" extent="1-1"/>
 <wire x1="2" y1="40.64" x2="7.69" y2="47.5246" width="0" layer="19" extent="16-16"/>
-<wire x1="5.9" y1="-4" x2="9" y2="7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VIN">
 <contactref element="U1" pad="15"/>
@@ -1303,16 +1303,16 @@ design rules under a new name.</description>
 <signal name="STCTL">
 <contactref element="J2" pad="4"/>
 <wire x1="22" y1="13.62" x2="20.1" y2="15.52" width="0.6096" layer="16"/>
-<wire x1="20.1" y1="24.85" x2="20.1" y2="19" width="0.6096" layer="16"/>
+<wire x1="20.1" y1="24.85" x2="20.1" y2="22.5" width="0.6096" layer="16"/>
 <contactref element="J1" pad="2"/>
 <contactref element="R3" pad="2"/>
-<wire x1="20.1" y1="19" x2="20.1" y2="15.52" width="0.6096" layer="16"/>
 <wire x1="22" y1="33.578" x2="22" y2="26.75" width="0.6096" layer="16"/>
 <wire x1="22" y1="26.75" x2="20.1" y2="24.85" width="0.6096" layer="16"/>
-<wire x1="17.5" y1="18.96" x2="20.06" y2="18.96" width="0.6096" layer="16"/>
-<wire x1="20.06" y1="18.96" x2="20.1" y2="19" width="0.6096" layer="16"/>
+<wire x1="17.04" y1="22.5" x2="18" y2="22.5" width="0.6096" layer="16"/>
 <contactref element="D1" pad="2"/>
-<wire x1="10.1" y1="-4" x2="22" y2="13.62" width="0" layer="19" extent="1-1"/>
+<wire x1="18" y1="22.5" x2="20.1" y2="22.5" width="0.6096" layer="16"/>
+<wire x1="18" y1="20.1" x2="18" y2="22.5" width="0.6096" layer="16"/>
+<wire x1="20.1" y1="15.52" x2="20.1" y2="22.5" width="0.6096" layer="16"/>
 </signal>
 <signal name="BTN">
 <contactref element="D3" pad="2"/>
@@ -1329,9 +1329,9 @@ design rules under a new name.</description>
 <contactref element="C2" pad="1"/>
 <via x="5.75" y="50.8" extent="1-16" drill="0.35"/>
 <wire x1="22" y1="8.54" x2="19.5362" y2="11.0038" width="0.6096" layer="1"/>
-<wire x1="19.5362" y1="23.6212375" x2="19.1397875" y2="24" width="0.6096" layer="1"/>
-<wire x1="19.1397875" y1="24" x2="14" y2="24" width="0.6096" layer="1"/>
-<wire x1="14" y1="24" x2="9.34956875" y2="28.65043125" width="0.6096" layer="1"/>
+<wire x1="19.5362" y1="23.6212375" x2="18.0931875" y2="25" width="0.6096" layer="1"/>
+<wire x1="18.0931875" y1="25" x2="13" y2="25" width="0.6096" layer="1"/>
+<wire x1="13" y1="25" x2="9.34956875" y2="28.65043125" width="0.6096" layer="1"/>
 <wire x1="19.5362" y1="11.0038" x2="19.5362" y2="23.6212375" width="0.6096" layer="1"/>
 <wire x1="5.75" y1="50.8" x2="7.3654" y2="50.8" width="0.6096" layer="16"/>
 <wire x1="7.3654" y1="50.8" x2="7.69" y2="50.4754" width="0.6096" layer="16"/>

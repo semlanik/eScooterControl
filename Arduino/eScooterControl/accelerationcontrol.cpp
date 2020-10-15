@@ -59,7 +59,7 @@ AccelerationControl::AccelerationControl() : m_stopState(LOW)
 {
   Wire.begin();
   pinMode(AcceleratorSensorPin, INPUT);
-  pinMode(StopSensorPin, INPUT);
+  pinMode(StopSensorPin, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(StopSensorPin), []() {
     AccelerationControl::instance()->stop();
   }, CHANGE);
@@ -97,8 +97,8 @@ void AccelerationControl::dispatch()
 
 void AccelerationControl::stop() {
   m_stopState = digitalRead(StopSensorPin);
-  Display::instance()->setStop(m_stopState);
-  if (m_stopState == HIGH) {
+  Display::instance()->setStop(m_stopState == LOW);
+  if (m_stopState == LOW) {
     m_cruiseLevel = 0; //reset cruise when stop
     setAccelerationLevel(0);
   }

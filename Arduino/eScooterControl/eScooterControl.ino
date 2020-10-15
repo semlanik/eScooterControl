@@ -75,6 +75,8 @@ void setup() {
     BatterySensor::instance()->dispatch();
   });
 
+  digitalWrite(PowerPin, HIGH); //Initialization end
+
 //  Serial.println("Init complete");
 }
 

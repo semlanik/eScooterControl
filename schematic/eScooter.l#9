@@ -412,8 +412,8 @@ Source: http://www.avagotech.com/docs/AV02-0410EN</description>
 </symbol>
 <symbol name="XT60">
 <description>XT60 connector</description>
-<pin name="VCC" x="-5.08" y="5.08" length="middle" direction="sup"/>
-<pin name="GND" x="-5.08" y="2.54" length="middle" direction="sup"/>
+<pin name="P$1" x="-5.08" y="5.08" visible="off" length="middle" direction="sup"/>
+<pin name="P$2" x="-5.08" y="2.54" visible="off" length="middle" direction="sup"/>
 <wire x1="-2.54" y1="7.62" x2="2.54" y2="7.62" width="0.254" layer="94"/>
 <wire x1="2.54" y1="7.62" x2="2.54" y2="0" width="0.254" layer="94"/>
 <wire x1="2.54" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
@@ -572,9 +572,14 @@ Source: http://www.avagotech.com/docs/AV02-0410EN</description>
 </deviceset>
 <deviceset name="XT60">
 <gates>
+<gate name="G$1" symbol="XT60" x="0" y="0"/>
 </gates>
 <devices>
-<device name="">
+<device name="" package="XT60">
+<connects>
+<connect gate="G$1" pin="P$1" pad="VCC"/>
+<connect gate="G$1" pin="P$2" pad="GND"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
