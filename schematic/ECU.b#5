@@ -1008,7 +1008,7 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CONN-08437" x="-79.28" y="22.86" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="-0.032" y="52.07" size="0.6096" layer="27" font="vector" ratio="20" rot="R270"/>
 </element>
-<element name="Q1" library="Transistor" library_urn="urn:adsk.eagle:library:16378713" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="NMOSFETSOT23" x="6.69" y="65.15" smashed="yes" rot="MR270">
+<element name="Q1" library="Transistor" library_urn="urn:adsk.eagle:library:16378713" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="NMOSFET" x="6.69" y="65.15" smashed="yes" rot="MR270">
 <attribute name="CATEGORY" value="Transistor" x="66.38" y="8" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="DESCRIPTION" value="" x="66.38" y="8" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="DRAIN_CURRENT" value="" x="66.38" y="8" size="1.778" layer="28" rot="MR270" display="off"/>
@@ -1022,9 +1022,9 @@ design rules under a new name.</description>
 <attribute name="SUB-CATEGORY" value="MOSFET" x="66.38" y="8" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="THERMALLOSS" value="" x="66.38" y="8" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="TYPE" value="N-Channel" x="66.38" y="8" size="1.778" layer="28" rot="MR270" display="off"/>
-<attribute name="VALUE" x="9.865" y="67.055" size="1.27" layer="28" rot="MR270"/>
+<attribute name="VALUE" value="NMOSFET" x="9.865" y="67.055" size="1.27" layer="28" rot="MR270"/>
 </element>
-<element name="Q2" library="Transistor" library_urn="urn:adsk.eagle:library:16378713" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="" x="4" y="15.66" smashed="yes" rot="MR0">
+<element name="Q2" library="Transistor" library_urn="urn:adsk.eagle:library:16378713" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="NMOSFET" x="4" y="15.66" smashed="yes" rot="MR0">
 <attribute name="CATEGORY" value="Transistor" x="-21.4" y="-58" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="DESCRIPTION" value="" x="-21.4" y="-58" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="DRAIN_CURRENT" value="" x="-21.4" y="-58" size="1.778" layer="28" rot="MR0" display="off"/>
@@ -1038,25 +1038,25 @@ design rules under a new name.</description>
 <attribute name="SUB-CATEGORY" value="MOSFET" x="-21.4" y="-58" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="THERMALLOSS" value="" x="-21.4" y="-58" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="TYPE" value="N-Channel" x="-21.4" y="-58" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="VALUE" x="5.905" y="12.485" size="1.27" layer="28" rot="MR0"/>
+<attribute name="VALUE" value="NMOSFET" x="5.905" y="12.485" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="Q4" library="Transistor" library_urn="urn:adsk.eagle:library:16378713" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="" x="2.52" y="23.66" smashed="yes" rot="MR0">
+<element name="Q4" library="Transistor" library_urn="urn:adsk.eagle:library:16378713" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="BSS84" x="2.52" y="23.66" smashed="yes" rot="MR0">
 <attribute name="CATEGORY" value="Transistor" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="DESCRIPTION" value="MOSFET P-CH 50V 130MA SOT-23" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="DRAIN_CURRENT" value="" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="DRAIN_CURRENT" value="130mA" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="MANUFACTURER" value="ON Semiconductor" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="MPN" value="BSS84" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="NAME" x="4.425" y="25.565" size="1.27" layer="26" rot="MR0"/>
-<attribute name="OPERATING_TEMP" value="" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="PART_STATUS" value="" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="ROHS_COMPLIANT" value="" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="OPERATING_TEMP" value="-55°C ~ 150°C" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="PART_STATUS" value="Active" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="ROHS_COMPLIANT" value="Yes" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="SERIES" value="" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="SUB-CATEGORY" value="MOSFET" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="THERMALLOSS" value="" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="THERMALLOSS" value="360mW" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="TYPE" value="P-Channel" x="-27.96" y="-50" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="VALUE" x="4.425" y="20.485" size="1.27" layer="28" rot="MR0"/>
+<attribute name="VALUE" value="BSS84" x="4.425" y="20.485" size="1.27" layer="28" rot="MR0"/>
 </element>
-<element name="Q5" library="Transistor" library_urn="urn:adsk.eagle:library:16378713" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="NMOSFETSOT23" x="18.31" y="40.67" smashed="yes" rot="MR90">
+<element name="Q5" library="Transistor" library_urn="urn:adsk.eagle:library:16378713" package="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="NMOSFET" x="18.31" y="40.67" smashed="yes" rot="MR90">
 <attribute name="CATEGORY" value="Transistor" x="-49" y="67.34" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="DESCRIPTION" value="" x="-49" y="67.34" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="DRAIN_CURRENT" value="" x="-49" y="67.34" size="1.778" layer="28" rot="MR90" display="off"/>
@@ -1070,7 +1070,7 @@ design rules under a new name.</description>
 <attribute name="SUB-CATEGORY" value="MOSFET" x="-49" y="67.34" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="THERMALLOSS" value="" x="-49" y="67.34" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="TYPE" value="N-Channel" x="-49" y="67.34" size="1.778" layer="28" rot="MR90" display="off"/>
-<attribute name="VALUE" x="15.135" y="38.765" size="1.27" layer="28" rot="MR90"/>
+<attribute name="VALUE" value="NMOSFET" x="15.135" y="38.765" size="1.27" layer="28" rot="MR90"/>
 </element>
 <element name="R1" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R1206" package3d_urn="urn:adsk.eagle:package:13301/1" value="10K" x="19.5" y="51.07" smashed="yes" rot="MR90">
 <attribute name="NAME" x="20.77" y="49.8" size="1.27" layer="26" rot="MR90"/>
@@ -1125,12 +1125,6 @@ design rules under a new name.</description>
 <attribute name="NAME" x="19.985" y="18" size="1.27" layer="26" rot="MR90" align="bottom-center"/>
 <attribute name="VALUE" x="16.015" y="18" size="1.27" layer="28" rot="MR90" align="top-center"/>
 </element>
-<element name="R6" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R1206" package3d_urn="urn:adsk.eagle:package:13301/1" value="10K" x="2" y="-4" smashed="yes">
-<attribute name="NAME" x="0.73" y="-2.73" size="1.27" layer="25"/>
-<attribute name="SPICEMODEL" value="NONE" x="2" y="-4" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="2" y="-4" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="0.73" y="-6.54" size="1.27" layer="27"/>
-</element>
 </elements>
 <signals>
 <signal name="3V3">
@@ -1145,13 +1139,7 @@ design rules under a new name.</description>
 <contactref element="J5" pad="3"/>
 <contactref element="C1" pad="1"/>
 <contactref element="D4" pad="1"/>
-<contactref element="R1" pad="1"/>
-<contactref element="Q2" pad="2"/>
-<contactref element="D7" pad="2"/>
-<contactref element="D8" pad="1"/>
 <contactref element="U1" pad="14"/>
-<contactref element="S1" pad="1"/>
-<contactref element="S1" pad="2"/>
 <contactref element="SG1" pad="1"/>
 <contactref element="Q1" pad="2"/>
 <contactref element="R5" pad="1"/>
@@ -1185,43 +1173,46 @@ design rules under a new name.</description>
 <via x="16" y="28" extent="1-16" drill="0.35"/>
 <contactref element="J1" pad="1"/>
 <contactref element="D1" pad="1"/>
+<contactref element="R1" pad="1"/>
+<contactref element="Q2" pad="2"/>
+<contactref element="D7" pad="2"/>
+<contactref element="D8" pad="1"/>
+<contactref element="S1" pad="1"/>
+<contactref element="S1" pad="2"/>
 </signal>
 <signal name="VIN">
-<contactref element="U1" pad="15"/>
 <contactref element="Q4" pad="3"/>
 <wire x1="2.52" y1="24.76" x2="2.52" y2="26.52" width="1.016" layer="16"/>
 <via x="4" y="28" extent="1-16" drill="0.35"/>
 <wire x1="4" y1="28" x2="5.69" y2="28" width="1.016" layer="1"/>
-<wire x1="5.69" y1="28" x2="5.75" y2="27.94" width="1.016" layer="1"/>
 <wire x1="2.52" y1="26.52" x2="4" y2="28" width="1.016" layer="16"/>
+<contactref element="U1" pad="15"/>
+<wire x1="5.69" y1="28" x2="5.75" y2="27.94" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DIN">
-<contactref element="J4" pad="3"/>
 <contactref element="U1" pad="28"/>
-<wire x1="12.08" y1="69.85" x2="12.08" y2="65.39" width="0.6096" layer="1"/>
 <wire x1="12.08" y1="65.39" x2="19.05" y2="58.42" width="0.6096" layer="1"/>
 <wire x1="19.05" y1="58.42" x2="21.65" y2="58.42" width="0.6096" layer="1"/>
+<contactref element="J4" pad="3"/>
+<wire x1="12.08" y1="65.39" x2="12.08" y2="69.85" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="CS">
-<contactref element="J4" pad="4"/>
 <contactref element="U1" pad="29"/>
-<wire x1="14.62" y1="69.85" x2="14.62" y2="65.39" width="0.6096" layer="1"/>
 <wire x1="14.62" y1="65.39" x2="19.05" y2="60.96" width="0.6096" layer="1"/>
 <wire x1="19.05" y1="60.96" x2="21.65" y2="60.96" width="0.6096" layer="1"/>
+<contactref element="J4" pad="4"/>
+<wire x1="14.62" y1="65.39" x2="14.62" y2="69.85" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="CLK">
-<contactref element="J4" pad="5"/>
 <contactref element="U1" pad="30"/>
-<wire x1="17.16" y1="69.85" x2="17.16" y2="65.39" width="0.6096" layer="1"/>
 <wire x1="17.16" y1="65.39" x2="19.05" y2="63.5" width="0.6096" layer="1"/>
 <wire x1="19.05" y1="63.5" x2="21.65" y2="63.5" width="0.6096" layer="1"/>
+<contactref element="J4" pad="5"/>
+<wire x1="17.16" y1="65.39" x2="17.16" y2="69.85" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="5V">
 <contactref element="J6" pad="1"/>
 <contactref element="J4" pad="1"/>
-<contactref element="J5" pad="2"/>
-<contactref element="J7" pad="2"/>
-<contactref element="D6" pad="1"/>
 <contactref element="U1" pad="12"/>
 <wire x1="8" y1="35.56" x2="5.75" y2="35.56" width="0.6096" layer="1"/>
 <wire x1="8" y1="64.998546875" x2="6.218546875" y2="66.78" width="0.6096" layer="1"/>
@@ -1230,50 +1221,54 @@ design rules under a new name.</description>
 <wire x1="6.218546875" y1="69.068546875" x2="7" y2="69.85" width="0.6096" layer="1"/>
 <wire x1="3.7184625" y1="66.78" x2="2" y2="66.78" width="0.6096" layer="1"/>
 <wire x1="8" y1="35.56" x2="8" y2="64.998546875" width="0.6096" layer="1"/>
-<wire x1="2" y1="48.26" x2="3.7184625" y2="49.9784625" width="0.6096" layer="1"/>
-<wire x1="3.7184625" y1="49.9784625" x2="3.7184625" y2="58" width="0.6096" layer="1"/>
 <wire x1="3.7184625" y1="58" x2="3.7184625" y2="66.78" width="0.6096" layer="1"/>
-<wire x1="2" y1="56.42" x2="2.1384625" y2="56.42" width="0.6096" layer="1"/>
 <wire x1="2.1384625" y1="56.42" x2="3.7184625" y2="58" width="0.6096" layer="1"/>
-<wire x1="2" y1="56.42" x2="2.58" y2="57" width="0.6096" layer="16"/>
+<contactref element="J5" pad="2"/>
+<contactref element="J7" pad="2"/>
+<contactref element="D6" pad="1"/>
 <wire x1="2.58" y1="57" x2="4" y2="57" width="0.6096" layer="16"/>
 <wire x1="4" y1="57" x2="5.9" y2="58.9" width="0.6096" layer="16"/>
 <wire x1="5.9" y1="58.9" x2="5.9" y2="59.07" width="0.6096" layer="16"/>
+<wire x1="2" y1="56.42" x2="2.58" y2="57" width="0.6096" layer="16"/>
+<wire x1="2.26" y1="48.26" x2="2" y2="48.26" width="0.6096" layer="1"/>
+<wire x1="3.7184625" y1="58" x2="3.7184625" y2="49.7184625" width="0.6096" layer="1"/>
+<wire x1="3.7184625" y1="49.7184625" x2="2.26" y2="48.26" width="0.6096" layer="1"/>
+<wire x1="2.1384625" y1="56.42" x2="2" y2="56.42" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="THIN">
 <contactref element="J5" pad="1"/>
 <contactref element="C1" pad="2"/>
 <contactref element="D4" pad="2"/>
-<contactref element="U1" pad="4"/>
-<via x="5.75" y="55.88" extent="1-16" drill="0.35"/>
 <wire x1="2" y1="53.88" x2="2.12" y2="54" width="0.6096" layer="16"/>
 <wire x1="7" y1="54" x2="7.5246" y2="54.5246" width="0.6096" layer="16"/>
 <wire x1="7.5246" y1="54.5246" x2="7.5246" y2="56.5" width="0.6096" layer="16"/>
 <wire x1="2.12" y1="54" x2="5" y2="54" width="0.6096" layer="16"/>
 <wire x1="5.51" y1="54" x2="7" y2="54" width="0.6096" layer="16"/>
-<wire x1="5.75" y1="55.88" x2="6.37" y2="56.5" width="0.6096" layer="16"/>
+<wire x1="6.37" y1="56.5" x2="5.75" y2="55.88" width="0.6096" layer="16"/>
 <wire x1="6.37" y1="56.5" x2="7.5246" y2="56.5" width="0.6096" layer="16"/>
-<wire x1="5.75" y1="55.88" x2="5.12" y2="55.88" width="0.6096" layer="1"/>
-<wire x1="5.12" y1="55.88" x2="5" y2="56" width="0.6096" layer="1"/>
 <wire x1="5.58" y1="54.07" x2="5.51" y2="54" width="0.6096" layer="16"/>
 <wire x1="5.51" y1="54" x2="5" y2="54" width="0.6096" layer="16"/>
+<contactref element="U1" pad="4"/>
+<wire x1="5.75" y1="55.88" x2="5.12" y2="55.88" width="0.6096" layer="1"/>
+<wire x1="5.12" y1="55.88" x2="5" y2="56" width="0.6096" layer="1"/>
+<wire x1="5.75" y1="55.88" x2="5.75" y2="55.88" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="SDA">
 <contactref element="J7" pad="3"/>
 <contactref element="U1" pad="8"/>
-<wire x1="2" y1="45.72" x2="5.75" y2="45.72" width="0.6096" layer="1"/>
+<wire x1="5.75" y1="45.72" x2="2" y2="45.72" width="0.6096" layer="1"/>
 </signal>
 <signal name="SCL">
-<contactref element="J7" pad="4"/>
 <contactref element="U1" pad="9"/>
+<contactref element="J7" pad="4"/>
 <wire x1="2" y1="43.18" x2="5.75" y2="43.18" width="0.6096" layer="1"/>
 </signal>
 <signal name="SP">
-<contactref element="Q5" pad="3"/>
 <contactref element="U1" pad="21"/>
 <via x="21.65" y="40.64" extent="1-16" drill="0.35"/>
-<wire x1="21.65" y1="40.64" x2="19.44" y2="40.64" width="0.6096" layer="16"/>
-<wire x1="19.44" y1="40.64" x2="19.41" y2="40.67" width="0.6096" layer="16"/>
+<contactref element="Q5" pad="3"/>
+<wire x1="19.44" y1="40.64" x2="21.65" y2="40.64" width="0.6096" layer="16"/>
+<wire x1="19.44" y1="40.64" x2="19.41" y2="40.67" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="STCTL">
 <contactref element="J2" pad="4"/>
@@ -1314,8 +1309,6 @@ design rules under a new name.</description>
 <wire x1="9.34956875" y1="28.65043125" x2="9.34956875" y2="50.34956875" width="0.6096" layer="1"/>
 <wire x1="7.69" y1="50.4754" x2="7.81583125" y2="50.34956875" width="0.6096" layer="16"/>
 <wire x1="7.81583125" y1="50.34956875" x2="9.34956875" y2="50.34956875" width="0.6096" layer="16"/>
-<contactref element="R6" pad="1"/>
-<wire x1="0.578" y1="-4" x2="22" y2="8.54" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPEED">
 <contactref element="J2" pad="6"/>
@@ -1334,32 +1327,32 @@ design rules under a new name.</description>
 <wire x1="19.7022" y1="36" x2="19.7845" y2="36" width="0.6096" layer="1"/>
 </signal>
 <signal name="LEDCTL">
-<contactref element="Q1" pad="1"/>
-<contactref element="R5" pad="2"/>
 <contactref element="U1" pad="27"/>
-<wire x1="7.79" y1="66.1" x2="8.148" y2="65.742" width="0.6096" layer="16"/>
-<wire x1="10.93" y1="65.742" x2="8.148" y2="65.742" width="0.6096" layer="16"/>
-<wire x1="12.93" y1="64.07" x2="11.258" y2="65.742" width="0.6096" layer="16"/>
-<wire x1="10.93" y1="65.742" x2="11.258" y2="65.742" width="0.6096" layer="16"/>
+<wire x1="11.258" y1="65.742" x2="12.93" y2="64.07" width="0.6096" layer="16"/>
 <wire x1="13" y1="62" x2="12.93" y2="62.07" width="0.6096" layer="16"/>
 <wire x1="12.93" y1="64.07" x2="12.93" y2="62.07" width="0.6096" layer="16"/>
 <via x="13" y="62" extent="1-16" drill="0.35"/>
 <wire x1="21.65" y1="55.88" x2="19.12" y2="55.88" width="0.6096" layer="1"/>
 <wire x1="19.12" y1="55.88" x2="13" y2="62" width="0.6096" layer="1"/>
+<contactref element="Q1" pad="1"/>
+<contactref element="R5" pad="2"/>
+<wire x1="7.79" y1="66.1" x2="8.148" y2="65.742" width="0.6096" layer="16"/>
+<wire x1="10.93" y1="65.742" x2="8.148" y2="65.742" width="0.6096" layer="16"/>
+<wire x1="10.93" y1="65.742" x2="11.258" y2="65.742" width="0.6096" layer="16"/>
 </signal>
 <signal name="STLEDCTL">
-<contactref element="J2" pad="5"/>
 <contactref element="U1" pad="22"/>
 <wire x1="21.65" y1="43.18" x2="21.3705" y2="42.9005" width="0.6096" layer="1"/>
 <wire x1="17.0822" y1="40.9891625" x2="17.0822" y2="37.44573125" width="0.6096" layer="1"/>
 <wire x1="21.3705" y1="42.9005" x2="18.9935375" y2="42.9005" width="0.6096" layer="1"/>
 <wire x1="18.9935375" y1="42.9005" x2="17.0822" y2="40.9891625" width="0.6096" layer="1"/>
-<wire x1="21.84" y1="16.16" x2="22" y2="16.16" width="0.6096" layer="1"/>
 <wire x1="17.0822" y1="37.44573125" x2="18.6354" y2="35.89253125" width="0.6096" layer="1"/>
 <wire x1="18.6354" y1="25.8152" x2="20.4506" y2="24" width="0.6096" layer="1"/>
-<wire x1="20.4506" y1="17.5494" x2="21.84" y2="16.16" width="0.6096" layer="1"/>
+<wire x1="21.84" y1="16.16" x2="20.4506" y2="17.5494" width="0.6096" layer="1"/>
 <wire x1="20.4506" y1="24" x2="20.4506" y2="17.5494" width="0.6096" layer="1"/>
 <wire x1="18.6354" y1="35.89253125" x2="18.6354" y2="25.8152" width="0.6096" layer="1"/>
+<contactref element="J2" pad="5"/>
+<wire x1="22" y1="16.16" x2="21.84" y2="16.16" width="0.6096" layer="1"/>
 </signal>
 <signal name="N$1">
 <contactref element="J6" pad="2"/>
@@ -1445,24 +1438,21 @@ design rules under a new name.</description>
 </signal>
 <signal name="SPK">
 <contactref element="U1" pad="10"/>
-<contactref element="SG1" pad="2"/>
 <wire x1="5.75" y1="40.64" x2="4.64" y2="40.64" width="0.6096" layer="1"/>
 <wire x1="3.5494" y1="39.5494" x2="3.5494" y2="30.12993125" width="0.6096" layer="1"/>
 <wire x1="4.64" y1="40.64" x2="3.5494" y2="39.5494" width="0.6096" layer="1"/>
 <wire x1="2.8824" y1="29.46293125" x2="2.8824" y2="13.3087875" width="0.6096" layer="1"/>
-<wire x1="6.0311875" y1="10.16" x2="7.19" y2="10.16" width="0.6096" layer="1"/>
 <wire x1="3.5494" y1="30.12993125" x2="2.8824" y2="29.46293125" width="0.6096" layer="1"/>
 <wire x1="2.8824" y1="13.3087875" x2="6.0311875" y2="10.16" width="0.6096" layer="1"/>
+<contactref element="SG1" pad="2"/>
+<wire x1="6.0311875" y1="10.16" x2="7.19" y2="10.16" width="0.6096" layer="1"/>
 </signal>
 <signal name="ST">
 <contactref element="U1" pad="20"/>
-<contactref element="R3" pad="1"/>
 <via x="21.65" y="38.1" extent="1-16" drill="0.35"/>
-<wire x1="21.65" y1="38.1" x2="22" y2="37.75" width="0.6096" layer="16"/>
-<wire x1="22" y1="37.75" x2="22" y2="35.422" width="0.6096" layer="16"/>
-</signal>
-<signal name="N$3">
-<contactref element="R6" pad="2"/>
+<wire x1="22" y1="37.75" x2="21.65" y2="38.1" width="0.6096" layer="16"/>
+<contactref element="R3" pad="1"/>
+<wire x1="22" y1="35.422" x2="22" y2="37.75" width="0.6096" layer="16"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
